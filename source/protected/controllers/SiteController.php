@@ -2,7 +2,6 @@
 
 class SiteController extends FrontendController
 {
-	public $layout='column1';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -28,9 +27,6 @@ class SiteController extends FrontendController
 	 */
 	public function actionIndex()
 	{
-		$this->layout='column2';
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
 	}
 	/**
@@ -115,5 +111,10 @@ class SiteController extends FrontendController
 	{
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
+	}
+	
+	public function actionAbout()
+	{
+		$this->render('about');
 	}
 }

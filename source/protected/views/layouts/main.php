@@ -1,80 +1,80 @@
-<?php /* @var $this Controller */ ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="language" content="en" />
-	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" >
-	<!-- blueprint CSS framework -->
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
-	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
-	<![endif]-->
-
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
-
-	<title><?php echo CHtml::encode($this->pageTitle)." | ".Yii::app()->name; ?></title>
-</head>
-
-<body>
-<div id="page">
-	<div id="page-container">
-		<div id="toolbar">
-			<div class="wrap-inner pane">
-				<div class="user"><a href="#"><?php echo Yii::t("main","Register")?></a>&nbsp;|&nbsp;<a href="#"><?php echo Yii::t("main","Login")?></a></div>
-			</div>
-		</div>
-		<div id="header">
-			<div class="wrr-header wrap-inner">
-				<div class="pane">
-					<div id="logo"><img width="160" src="<?php echo Yii::app()->request->baseUrl; ?>/images/logo_g.png" /></div>
-					<div id="menu">
-						<div class="wrr-menu">
-						<?php $this->widget('application.widgets.Menu.Menu', array('_item_active'=>$this->activemenu,'_gmid'=>1));?>
+<?php require_once '_header.php';?>
+<body class="inner">
+	<!-- wrapper -->
+	<div id="wrapper">
+		<div class="w1">
+			<div class="w2">
+				<!-- header -->
+				<header id="header">
+					<!-- section -->
+					<div class="section">
+						<h1 class="logo"><a href="./index.html">SmartBusiness</a></h1>
+						<div class="contact-box">
+							<strong class="phone">0914.937.496</strong>
+							<!-- social -->
+							<ul class="social">
+								<li><a href="#" class="twitter">twitter</a></li>
+								<li><a href="#" class="facebook">facebook</a></li>
+								<li><a href="#" class="pinterest">pinterest</a></li>
+								<li><a href="#" class="google">google</a></li>
+								<li><a href="#" class="rss">rss</a></li>
+							</ul>
 						</div>
 					</div>
-				</div>
+					<!-- nav-box -->
+				<!--
+				<nav class="nav-box">
+					<ul id="nav">
+						<li class="active"><a href="./index.html">Home</a>
+							<ul>
+								<li><a>1</a></li>
+								<li><a>1</a><ul>
+								<li><a>1</a></li>
+								<li><a>1</a></li>
+							</ul></li>
+							</ul>
+						</li>
+						<li><a href="software.html">Software</a></li>								
+						<li><a href="pricing.html">Pricing</a></li>								
+						<li><a href="casestudies.html">Case Studies</a></li>							
+						<li><a href="testimonials.html">Testimonials</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="blog.html">Blog</a></li>
+					</ul>
+				</nav>
+				-->
+				<?php $this->widget('application.widgets.Menu.Menu', array('_item_active'=>$this->activemenu,'_gmid'=>1,'_style'=>'style2'));?>
+				</header>
+				<!-- main -->
+				<?php echo $content;?>
 			</div>
 		</div>
-		<?php 
-		if($this->clips['body-top']){
-			echo '<div id="slide">'.$this->clips['body-top'].'</div>';
-		}
-		?>
-			<?php echo $content;?>
-		<div id="footer">
-			<div class="wrap-inner">
-				<div class="pane">
-					<?php $this->widget('application.widgets.G_FooterWidget', array(
-							'data'=>array(
-									array('title'=>'Testtimonials','html'=>'
-											<p>We are providing the best solution for web development.</p>
-											'
-									),
-									array('title'=>'What We Do','html'=>'
-											<p>Yii experts.</p>
-											<p>Magento experts.</p>
-											<p>Joomla experts.</p>
-											<p>Wordpress experts.</p>
-											<p>SEO, Social network marketing, Adwords Google.</p>
-											'
-									),
-									array('title'=>'Find Us','html'=>'
-										<p>Gurucodevn Service & Technology development.</p>
-										<p>Address: 112 - Me Tri - Tu Liem - Ha Noi - Viet Nam</p>
-										<p>Mobile: 0978 55 77 28</p>
-										<p>Web: http://gurucodevn.com</p>
-										'
-									),
-							)
-					));?>
-					<p class="copyright">&copy;2014 Gurucodevn Premium Responsive Business Solutions for Web 2.0</p>
-				</div>
-			</div>
-		</div>
+		<!-- footer -->
+		<?php require_once '_footer.php';?>
 	</div>
-</div>
+	<script type="text/javascript">
+	$('a[data-rel]').each(function() {
+	$(this).attr('rel', $(this).attr('data-rel')).removeAttr('data-rel');
+	});
+	</script>	
+	<!--<div class="theme_settings_wrapper">
+		<a href="javascript:void(0)" id="show_settings_button"></a>
+		<div class="theme_settings_container">
+			<div class="theme_settings_container_top"></div>
+			<div class="theme_settings_container_bott"></div>
+			<a href="javascript:void(0)" id="hide_settings_button"></a>
+			<h3>Support</h3>
+			<a href="../../wide/light-red/"><img src="<?php echo $themeUrl; ?>/demo/images/settings/circle.png" alt="image description" /> Sale</a><br />
+			<a href="./index.html"><img src="<?php echo $themeUrl; ?>/demo/images/settings/circle.png" alt="image description" /> Technical</a><br /><br /><h4>&nbsp;</h4>
+			<h3>Social Page</h3>
+			<ul id="color_scheme" class="styleswitcher">
+				<li><a href="../light-blue/index.html" id="blue" title="Blue">Blue</a></li>
+				<li><a href="../light-orange/index.html" id="orange" title="Orange">Orange</a></li>
+				<li><a href="./index.html" id="red" title="Red">Red</a></li>
+				<li><a href="../light-green/index.html" id="green" title="Green">Green</a></li>
+			</ul>
+		</div>	
+	</div>
+	-->
 </body>
 </html>

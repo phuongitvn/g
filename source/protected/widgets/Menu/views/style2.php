@@ -1,4 +1,9 @@
-<ul class="sf-menu" id="mntop">
+<?php 
+$cs = Yii::app()->getClientScript();
+$cs->registerScriptFile("{$this->_url}/dropdown-menu.js", CClientScript::POS_END);
+?>
+<div class="nav-box">
+<ul id="nav">
 <?php 
 
 foreach($items as $i => $item){
@@ -40,3 +45,4 @@ foreach($items as $i => $item){
 
 ?>
 </ul>
+</div>

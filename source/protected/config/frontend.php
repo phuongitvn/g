@@ -9,8 +9,8 @@ return CMap::mergeArray(
 	require_once dirname(__FILE__).'../../../common/config/common.php',
 	array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Gurucodevn',
-
+	'name'=>'Sale Fly',
+	'theme'=>'salefly',
 	// preloading 'log' component
 	'preload'=>array('log'),
 
@@ -36,7 +36,8 @@ return CMap::mergeArray(
 			'urlFormat'=>'path',
 			'rules'=>array(
 				''=>'site/index',
-				'<action:(login|logout|contact|home|news)>' => 'site/<action>',
+				'<action:(login|logout|about|index)>' => 'site/<action>',
+				'<controller:(software|pricing|casestudies|testimonials|blog)>' => '<controller>/index',
 				'<alias>'=>'site/page',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
