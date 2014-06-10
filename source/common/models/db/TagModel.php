@@ -1,8 +1,8 @@
 <?php
 
-Yii::import('common.models._base.BaseLookupModel');
+Yii::import('common.models._base.BaseTagModel');
 
-class LookupModel extends BaseLookupModel
+class TagModel extends BaseTagModel
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

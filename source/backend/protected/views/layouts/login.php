@@ -14,6 +14,8 @@
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body>
+<div id="wrr-body">
 <?php echo $content; ?>
+</div>
 </body>
 </html>

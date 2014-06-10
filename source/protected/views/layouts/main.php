@@ -8,7 +8,7 @@
 				<header id="header">
 					<!-- section -->
 					<div class="section">
-						<h1 class="logo"><a href="./index.html">SmartBusiness</a></h1>
+						<h1 class="logo"><a href="./index.html"><img width="250" src="<?php echo Yii::app()->theme->baseUrl?>/images/logo.png" /></a></h1>
 						<div class="contact-box">
 							<strong class="phone">0914.937.496</strong>
 							<!-- social -->

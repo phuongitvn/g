@@ -146,11 +146,7 @@ h6 {
 /* logo */
 .logo {
 	float: left;
-	background: url(../images/logo-red.png) no-repeat;
-	width: 200px;
-	height: 53px;
 	overflow: hidden;
-	text-indent: -9999px;
 }
 .logo a {
 	display:block;
