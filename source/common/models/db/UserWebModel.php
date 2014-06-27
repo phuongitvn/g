@@ -1,8 +1,8 @@
 <?php
 
-Yii::import('common.models.db._base.BaseTagModel');
+Yii::import('common.models.db._base.BaseUserWebModel');
 
-class TagModel extends BaseTagModel
+class UserWebModel extends BaseUserWebModel
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

@@ -1,7 +1,7 @@
-<?php if(!empty($_GET['tag'])): ?>
-<h1>Posts Tagged with <i><?php echo CHtml::encode($_GET['tag']); ?></i></h1>
-<?php endif; ?>
-<?php $themeUrl = Yii::app()->theme->baseUrl;?>
+<?php
+$this->pageTitle=$model->title;
+$themeUrl = Yii::app()->theme->baseUrl;
+?>
 <div id="main">
 <!-- content-panel -->
 <div class="content-panel">
@@ -20,16 +20,37 @@
 	<div id="content">
 		<div class="c1">
 			<!-- posts -->
-			<div class="posts">
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-	'template'=>"{items}\n{pager}",
-	'pager'=>array(
-		'htmlOptions'=>array('class'=>'paging')
-	)	
+<?php $this->renderPartial('_view', array(
+	'data'=>$model,
 )); ?>
+
+<div id="comments" class="comments">
+ <div class="comments">
+	<?php if($model->commentCount>=1): ?>
+		<h3>
+			<?php echo $model->commentCount>1 ? $model->commentCount . ' comments' : 'One comment'; ?>
+		</h3>
+
+		<?php $this->renderPartial('_comments',array(
+			'post'=>$model,
+			'comments'=>$model->comments,
+		)); ?>
+	<?php endif; ?>
 </div>
+<fieldset>
+	<h3>Leave a Comment</h3>
+
+	<?php if(Yii::app()->user->hasFlash('commentSubmitted')): ?>
+		<div class="flash-success">
+			<?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
+		</div>
+	<?php else: ?>
+		<?php $this->renderPartial('/comment/_form',array(
+			'model'=>$comment,
+		)); ?>
+	<?php endif; ?>
+</fieldset>
+</div><!-- comments -->
 </div>
 </div>
 <!-- sidebar -->

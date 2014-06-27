@@ -1401,9 +1401,11 @@ a:hover .icon.ico6{background:url(../images/ico6-hover.png) no-repeat;}
 	border-radius: 2px;
 	padding:1px 8px;
 }
-.paging a:hover {
-	color:#222;
-	border:1px solid #bdbdbd;
+.paging a:hover,
+.paging .selected a{
+	background: #FF6041;
+color: #FFF;
+border: 1px solid #FF6041;
 }
 /* type-box */
 .type-box {

@@ -1,8 +1,5 @@
 <?php
-
-Yii::import('common.models._base.BaseCommentModel');
-
-class CommentModel extends BaseCommentModel
+class WebPostModel extends PostModel
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

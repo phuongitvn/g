@@ -11,6 +11,7 @@
  *
  * @property integer $id
  * @property string $title
+ * @property string $intro_text
  * @property string $content
  * @property string $tags
  * @property integer $status
@@ -43,9 +44,9 @@ abstract class BasePostModel extends GxActiveRecord {
 			array('title, content, status, author_id', 'required'),
 			array('status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
-			array('tags', 'safe'),
-			array('tags, create_time, update_time', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, title, content, tags, status, create_time, update_time, author_id', 'safe', 'on'=>'search'),
+			array('intro_text, tags', 'safe'),
+			array('intro_text, tags, create_time, update_time', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, title, intro_text, content, tags, status, create_time, update_time, author_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +65,7 @@ abstract class BasePostModel extends GxActiveRecord {
 		return array(
 			'id' => Yii::t('app', 'ID'),
 			'title' => Yii::t('app', 'Title'),
+			'intro_text' => Yii::t('app', 'Intro Text'),
 			'content' => Yii::t('app', 'Content'),
 			'tags' => Yii::t('app', 'Tags'),
 			'status' => Yii::t('app', 'Status'),
@@ -79,6 +81,7 @@ abstract class BasePostModel extends GxActiveRecord {
 
 		$criteria->compare('id', $this->id);
 		$criteria->compare('title', $this->title, true);
+		$criteria->compare('intro_text', $this->intro_text, true);
 		$criteria->compare('content', $this->content, true);
 		$criteria->compare('tags', $this->tags, true);
 		$criteria->compare('status', $this->status);
