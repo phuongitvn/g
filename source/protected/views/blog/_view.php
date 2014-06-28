@@ -9,7 +9,7 @@ $action = Yii::app()->controller->action->id;
 	<div class="text-box">
 		<div class="meta">
 			<h3><?php echo CHtml::link(CHtml::encode($data->title), $data->url); ?></h3>
-			<p>by <?php echo $data->author->username . ' on ' . date('F j, Y',$data->create_time); ?>· <a href="#">Mobile</a>, <a href="#">Website</a> Â· <?php echo CHtml::link("Comments ({$data->commentCount})",$data->url.'#comments'); ?></p>
+			<p>Đăng bởi <?php echo $data->author->username . ', Ngày ' . date('d/m/Y',strtotime($data->create_time)); ?>, <?php echo CHtml::link("Bình luận ({$data->commentCount})",$data->url.'#comments'); ?></p>
 		</div>
 		<p>
 			<?php

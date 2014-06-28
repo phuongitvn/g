@@ -1,6 +1,6 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-<div id="content">
+<div id="main">
 	<div class="wrap-inner pane">
 		<div class="wrr-page-content"><?php echo $content; ?></div>
 	</div>

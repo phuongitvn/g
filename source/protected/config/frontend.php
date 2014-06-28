@@ -18,6 +18,7 @@ return CMap::mergeArray(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.portlets.*',
 	),
 
 	'modules'=>array(
@@ -77,7 +78,8 @@ return CMap::mergeArray(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
-		'postsPerPage'=>1
+		'postsPerPage'=>20,
+		'tagCloudCount'=>20
 	),
 	)
 );

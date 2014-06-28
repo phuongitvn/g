@@ -1123,6 +1123,7 @@ a:hover .icon.ico6{background:url(../images/ico6-hover.png) no-repeat;}
 .posts .post-box {
 	padding-top:23px;
 	margin:-23px 0 23px;
+	overflow: hidden;
 }
 .post-box .meta {padding:0 0 10px;}
 .post-box .meta p {

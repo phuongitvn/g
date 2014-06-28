@@ -11,7 +11,6 @@
  *
  * @property integer $id
  * @property integer $post_id
- * @property string $intro_text
  * @property string $content
  * @property integer $status
  * @property string $email
@@ -47,9 +46,9 @@ abstract class BaseCommentModel extends GxActiveRecord {
 			array('post_id, status, modified_by', 'numerical', 'integerOnly'=>true),
 			array('email, url, author', 'length', 'max'=>128),
 			array('type', 'length', 'max'=>10),
-			array('intro_text, create_time, modified', 'safe'),
-			array('intro_text, status, email, url, type, create_time, modified, modified_by', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, post_id, intro_text, content, status, email, url, type, create_time, author, modified, modified_by', 'safe', 'on'=>'search'),
+			array('create_time, modified', 'safe'),
+			array('status, email, url, type, create_time, modified, modified_by', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, post_id, content, status, email, url, type, create_time, author, modified, modified_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -67,7 +66,6 @@ abstract class BaseCommentModel extends GxActiveRecord {
 		return array(
 			'id' => Yii::t('app', 'ID'),
 			'post_id' => Yii::t('app', 'Post'),
-			'intro_text' => Yii::t('app', 'Intro Text'),
 			'content' => Yii::t('app', 'Content'),
 			'status' => Yii::t('app', 'Status'),
 			'email' => Yii::t('app', 'Email'),
@@ -85,7 +83,6 @@ abstract class BaseCommentModel extends GxActiveRecord {
 
 		$criteria->compare('id', $this->id);
 		$criteria->compare('post_id', $this->post_id);
-		$criteria->compare('intro_text', $this->intro_text, true);
 		$criteria->compare('content', $this->content, true);
 		$criteria->compare('status', $this->status);
 		$criteria->compare('email', $this->email, true);

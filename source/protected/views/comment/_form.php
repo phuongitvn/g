@@ -7,7 +7,7 @@
 			'class'=>'comment-form',
 	)
 )); ?>
-
+<fieldset>
 	<div class="row">
 		<?php echo $form->labelEx($model,'author'); ?>
 		<span class="text">
@@ -37,7 +37,7 @@
 	<div class="row buttons">
 		<span class="submit">Gửi<?php echo CHtml::submitButton($model->isNewRecord ? 'Submit' : 'Save'); ?></span>
 	</div>
-
+</fieldset>
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->

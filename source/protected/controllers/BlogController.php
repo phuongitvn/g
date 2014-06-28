@@ -2,6 +2,7 @@
 class BlogController extends FrontendController
 {
 	private $_model;
+	public $layout='//layouts/column1';
 	public function actionIndex()
 	{
 		$criteria=new CDbCriteria(array(

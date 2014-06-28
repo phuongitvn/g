@@ -42,7 +42,7 @@ abstract class BasePostModel extends GxActiveRecord {
 	public function rules() {
 		return array(
 			array('title, content, status, author_id', 'required'),
-			array('status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
+			array('status, author_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
 			array('intro_text, tags', 'safe'),
 			array('intro_text, tags, create_time, update_time', 'default', 'setOnEmpty' => true, 'value' => null),

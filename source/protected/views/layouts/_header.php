@@ -8,9 +8,9 @@ $themeUrl = Yii::app()->theme->baseUrl;
 	<meta name="language" content="en" />
 	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/images/favicon.ico" >
 	<!-- blueprint CSS framework -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600italic,600,400italic,300italic,300,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
-	<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css' />	
+	<link rel="stylesheet" type="text/css" href="<?php echo $themeUrl; ?>/fonts/font.css" />
 	
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo $themeUrl; ?>/css/all.css" />
 <!-- get jQuery from the google apis -->
 	<?php Yii::app()->clientScript->scriptMap=array('jquery.min.js'=>false);?>

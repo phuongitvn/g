@@ -59,9 +59,9 @@ class PostModel extends BasePostModel
 	public function addComment($comment)
 	{
 		if(Yii::app()->params['commentNeedApproval'])
-			$comment->status=Comment::STATUS_PENDING;
+			$comment->status=CommentModel::STATUS_PENDING;
 		else
-			$comment->status=Comment::STATUS_APPROVED;
+			$comment->status=CommentModel::STATUS_APPROVED;
 		$comment->post_id=$this->id;
 		return $comment->save();
 	}
@@ -108,8 +108,8 @@ class PostModel extends BasePostModel
 	protected function afterDelete()
 	{
 		parent::afterDelete();
-		Comment::model()->deleteAll('post_id='.$this->id);
-		Tag::model()->updateFrequency($this->tags, '');
+		CommentModel::model()->deleteAll('post_id='.$this->id);
+		TagModel::model()->updateFrequency($this->tags, '');
 	}
 	
 	/**

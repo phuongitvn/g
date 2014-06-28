@@ -34,19 +34,7 @@
 								<!-- col25 -->
 								<div class="col25">
 									<div class="col-holder">
-										<div class="blog-links">
-											<h4>Recent Blog Posts</h4>
-											<ul>
-												<li>
-													<h6><a href="./blog-single-post.html">Post 1</a></h6>
-													<p>Post detail 1 ... </p>
-												</li>
-												<li>
-													<h6><a href="./blog-single-post.html">Post 2</a></h6>
-													<p>Post detail 2..</p>
-												</li>
-											</ul>
-										</div>
+										<?php $this->widget('RecentBlogPosts'); ?>
 									</div>
 								</div>
 								<!-- col25 -->

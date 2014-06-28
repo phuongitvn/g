@@ -46,7 +46,7 @@
 				<?php $this->widget('application.widgets.Menu.Menu', array('_item_active'=>$this->activemenu,'_gmid'=>1,'_style'=>'style2'));?>
 				</header>
 				<!-- main -->
-				<?php echo $content;?>
+				<div id="main"><?php echo $content;?></div>
 			</div>
 		</div>
 		<!-- footer -->
