@@ -11,7 +11,7 @@ class BlogController extends FrontendController
 				'with'=>'commentCount',
 		));
 		if(isset($_GET['tag']))
-			$criteria->addSearchCondition('WebTagModel',$_GET['tag']);
+			$criteria->addSearchCondition('tags',$_GET['tag']);
 		
 		$dataProvider=new CActiveDataProvider('WebPostModel', array(
 				'pagination'=>array(

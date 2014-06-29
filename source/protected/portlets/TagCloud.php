@@ -13,7 +13,7 @@ class TagCloud extends GPortlet
 		echo '<ul class="popularity">';
 		foreach($tags as $tag=>$weight)
 		{
-			$link=CHtml::link(CHtml::encode($tag), array('post/index','tag'=>$tag));
+			$link=CHtml::link(CHtml::encode($tag), array('blog/index','tag'=>$tag));
 			echo CHtml::tag('li', array(
 				'class'=>'tag',
 				'style'=>"font-size:{$weight}pt",
