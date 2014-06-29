@@ -70,18 +70,15 @@
 							<div class="holder">
 								<nav class="add-nav">
 									<ul>
-										<li class="active"><a href="./index.html">Home</a></li>
-                                        <li><a href="software.html">Software</a></li>								
-                                        <li><a href="pricing.html">Pricing</a></li>								
+										<li class="active"><a href="./index.html">Trang chủ</a></li>
+                                        <li><a href="software.html">Giải pháp</a></li>								
                                         <li><a href="casestudies.html">Case Studies</a></li>							
-                                        <li><a href="testimonials.html">Testimonials</a></li>
-                                        <li><a href="about.html">About</a></li>
                                         <li><a href="blog.html">Blog</a></li>
-                            
+                            			<li><a href="about.html">Giới thiệu</a></li>
 									</ul>
 								</nav>
 								<div class="by">
-									&copy; Copyright 2013. <a href="#">SaleFly</a>. All right reserved.
+									&copy; Copyright 2013-2014. <a href="http://thongtinquanly.com">Thongtinquanly</a>. All right reserved.
 								</div>
 							</div>
 						</div>
