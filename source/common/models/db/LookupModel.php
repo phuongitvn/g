@@ -1,6 +1,6 @@
 <?php
 
-Yii::import('common.models._base.BaseLookupModel');
+Yii::import('common.models.db._base.BaseLookupModel');
 
 class LookupModel extends BaseLookupModel
 {
