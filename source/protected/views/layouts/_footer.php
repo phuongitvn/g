@@ -9,26 +9,17 @@
 								<div class="col25">
 									<div class="col-holder">
 										<!-- contact -->	
-										<h4>Get in Touch</h4>
+										<h4>Liên hệ</h4>
 										<dl>
-											<dt>Telephone:</dt>
-											<dd>0914.937.496</dd>
-											<dt>Fax:</dt>
-											<dd>+1 800 889 9898</dd>
+											<dt>Điện thoại:</dt>
+											<dd>08 6268 0851</dd>
 											<dt>E-mail:</dt>
-											<dd><a href="mailto:contact@salefly.vn">contact@salefly.vn</a></dd>
+											<dd><a href="mailto:contact@salefly.vn">info@salefly.vn</a></dd>
+											<dt>MST:</dt><dd>0312153298</dd>
 										</dl>
 										<address>
-											Tòa nhà Packsimex 52 Đông Du, Phường Bến Nghé, Quận 1, <br />TP Hồ Chí Minh, Việt Nam.
+											117 Lý Chính Thắng, toà Nhà An Phú Plaza, Phường 7, Quận 3, TP.HCM
 										</address>
-										<h4>Interesting stuff</h4>
-										<ul class="social2">
-											<li><a href="#" class="twitter">twitter</a></li>
-											<li><a href="#" class="facebook">facebook</a></li>
-											<li><a href="#" class="pinterest">pinterest</a></li>
-											<li><a href="#" class="google">google</a></li>
-											<li><a href="#" class="rss">rss</a></li>
-										</ul>
 									</div>
 								</div>
 								<!-- col25 -->
