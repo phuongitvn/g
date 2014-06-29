@@ -3,7 +3,7 @@ Yii::import('application.widgets.base.GPortlet');
 
 class RecentBlogPosts extends GPortlet
 {
-	public $title='Recent Blog Posts';
+	public $title='Bài viết mới';
 	public $maxPosts=2;
 	public function init()
 	{

@@ -10,13 +10,13 @@
 					<div class="section">
 						<h1 class="logo"><a href="./index.html"><img width="250" src="<?php echo Yii::app()->theme->baseUrl?>/images/logo.png" /></a></h1>
 						<div class="contact-box">
-							<strong class="phone">0914.937.496</strong>
+							<strong class="phone">HOTLINE: <span>0902 807 007</span></strong>
 							<!-- social -->
 							<ul class="social">
+								<li><a href="http://facebook.com/thongtinquanly" target="_blank" class="facebook">facebook</a></li>
+								<li><a href="https://plus.google.com/112674651249945423358/posts" target="_blank" class="google">google</a></li>
 								<li><a href="#" class="twitter">twitter</a></li>
-								<li><a href="#" class="facebook">facebook</a></li>
 								<li><a href="#" class="pinterest">pinterest</a></li>
-								<li><a href="#" class="google">google</a></li>
 								<li><a href="#" class="rss">rss</a></li>
 							</ul>
 						</div>

@@ -167,9 +167,10 @@ h6 {
 	text-decoration:none;
 	color:#666;
 	float:left;
-	font:300 14px/21px "Oswald", Arial, Helvetica, sans-serif;
 	background:url(../images/ico-phone.png) no-repeat 0 4px;
 	padding:1px 0 0 25px;
+	font-weight: bold;
+	font-size: 13px;
 }
 /* social */
 .social {
