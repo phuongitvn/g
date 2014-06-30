@@ -17,9 +17,9 @@ class PostModel extends BasePostModel
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-				'author' => array(self::BELONGS_TO, 'WebUserWebModel', 'author_id'),
-				'comments' => array(self::HAS_MANY, 'WebCommentModel', 'post_id', 'condition'=>'comments.status='.WebCommentModel::STATUS_APPROVED, 'order'=>'comments.create_time DESC'),
-				'commentCount' => array(self::STAT, 'WebCommentModel', 'post_id', 'condition'=>'status='.WebCommentModel::STATUS_APPROVED),
+				'author' => array(self::BELONGS_TO, 'UserWebModel', 'author_id'),
+				'comments' => array(self::HAS_MANY, 'CommentModel', 'post_id', 'condition'=>'comments.status='.CommentModel::STATUS_APPROVED, 'order'=>'comments.create_time DESC'),
+				'commentCount' => array(self::STAT, 'CommentModel', 'post_id', 'condition'=>'status='.CommentModel::STATUS_APPROVED),
 		);
 	}
 	/**
@@ -124,7 +124,7 @@ class PostModel extends BasePostModel
 	
 		$criteria->compare('status',$this->status);
 	
-		return new CActiveDataProvider('Post', array(
+		return new CActiveDataProvider('PostModel', array(
 				'criteria'=>$criteria,
 				'sort'=>array(
 						'defaultOrder'=>'status, update_time DESC',

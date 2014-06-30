@@ -44,6 +44,7 @@ array(
 		'infosys',
 		'shop' => array( 'debug' => 'true'),
 		'sys',
+		'blog',
 		'user'=>array(
 			# encrypting method (php hash function)
 			'hash' => 'md5',
@@ -71,6 +72,7 @@ array(
 			'userid'=>'id', //default: userid
 			'username'=>'username', //default:username
 			'delimeter'=>'@', //default:-'debug'=>true, //default :false
+			'debug'=>true,
 			'pageSize'=>10, // default : 15
 			'superUser' =>'SupperAdmin', //default: Authorizer
 			'css'=>'srbac.css',  //default: srbac.css
