@@ -26,33 +26,33 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 		<div class="holder">
 			<!-- title-box -->
 			<div class="title-box">
-				<h2>Inbound Marketing Software</h2>
-				<p>SaleFly's software contains everything you need to do inbound marketing. You can blog, send email, monitor social media, create web and landing pages, do marketing automation, SEO and more - all in one integrated platform</p>
+				<h2>ISM - THÔNG TIN QUÁN LÝ</h2>
+				<p>Chúng tôi tư vấn để giúp doanh nghiệp quản lý được thông tin một cách hiệu quả, tiết kiệm chi phí và đem lại lợi nhuận cao nhât.</p>
 			</div>
 			<!-- boxes-section -->
 			<div class="boxes-section">
 				<article class="col">
 					<a href="#"><div class="icon ico1"></div></a>
 					<div class="text-box">
-						<h3>Tools to Attract Visitors</h3>
+						<h3>Tư vấn giải pháp</h3>
 						<p>Blogging software that fuels lead generation.</p>
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>
 				<article class="col">
 					<a href="#"><div class="icon ico2"></div></a>
 					<div class="text-box">
-						<h3>Tools to Convert Leads</h3>
+						<h3>Cung ứng giải pháp tin cậy</h3>
 						<p>Create a powerful landing page in 3 easy steps</p>
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>
 				<article class="col last">
 					<a href="#"><div class="icon ico3"></div></a>
 					<div class="text-box">
-						<h3>Tools to Close Customers</h3>
+						<h3>Hỗ trợ khách hàng lâu dài</h3>
 						<p>All your analytics in one place.</p>
-						<a href="#" class="btn">Read more</a>
+						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>
 			</div>
