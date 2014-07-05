@@ -8,3 +8,6 @@ body
 .errorMessage{
 	color: red;
 }
+.wg-content img{
+	margin: 5px;
+}
