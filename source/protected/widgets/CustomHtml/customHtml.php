@@ -10,7 +10,7 @@ class customHtml extends CWidget
 	}
 	public function run()
 	{
-		$params = FrontendWidgetsModel::model()->findByPk($this->_wID);
+		$params = WidgetsModel::model()->findByPk($this->_wID);
 		$this->render('default', array(
 				'params'=>$params,
 				'csClass'=>$this->csClass

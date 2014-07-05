@@ -2,7 +2,7 @@
 
 Yii::import('common.models.db.ContentModel');
 
-class FrontendNewsModel extends ContentModel
+class WebArticleModel extends ContentModel
 {
 	public static function model($className=__CLASS__) {
 		return parent::model($className);

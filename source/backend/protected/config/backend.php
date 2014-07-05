@@ -179,6 +179,7 @@ array(
 					array('class'=>'customHtml', 'title'=>'Custom Html', 'path'=>'frontend.widgets.CustomHtml.customHtml'),
 					array('class'=>'Menu', 'title'=>'Menu', 'path'=>'frontend.widgets.Menu.Menu'),
 					array('class'=>'Support', 'title'=>'Support', 'path'=>'frontend.widgets.Support.Support'),
+					array('class'=>'TabWidget', 'title'=>'Tab', 'path'=>'frontend.widgets.tab.TabWidget'),
 			),
 	)
 ));

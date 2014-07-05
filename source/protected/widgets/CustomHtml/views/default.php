@@ -4,9 +4,9 @@ if(!empty($params)):
 	$data = @unserialize($params->params);
 ?>
 <?php if($params->show_title>0):?>
-<h1 class="title"><?php echo $params->title;?></h1>
+<h3><?php echo $params->title;?></h3>
 <?php endif;?>
-<div class="bht">
+<div class="wg-content">
 <?php echo $data['content'];?>
 </div>
 <?php endif;?>

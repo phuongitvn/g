@@ -64,105 +64,22 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 			<!-- col67 -->
 			<div class="col67">
 				<div class="col-holder">
-					<h3>Why Choose SaleFly Inbound Marketing Software ? We'll Tell You!</h3>
-					<span class="image alignleft"><img src="<?php echo $themeUrl; ?>/images/portfolio-4.jpg" alt="image description" /></span>									
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. </p>
-									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. </p>									
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. </p>									
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper. </p>									
-								</div>
-							</div>					
+					<?php $this->widget('application.widgets.CustomHtml.customHtml', array('_wID'=>20));?>
+				</div>
+			</div>					
 							<!-- col33 -->
 			<div class="col33">
 				<div class="col-holder">
-					<h3>Awesome Features</h3>
-					<!-- accordion -->
-									<ul id="accord" class="accordion">
-										<li class="active">
-											<a href="#" class="opener">Blogging</a>
-											<div class="slide">
-												<p>Easily create remarkable content that will help your business get found.</p>
-											</div>
-										</li>
-										<li>
-											<a href="#" class="opener">Social Inbox</a>
-											<div class="slide">
-												<p>Publish and see Social Analytics across Facebook, LinkedIn, Twitter and other networks.</p>
-											</div>
-										</li>
-										<li>
-											<a href="#" class="opener">SEO</a>
-											<div class="slide">
-												<p>Improve your search rankings and get found by quality leads.</p>
-											</div>
-										</li>
-										<li>
-											<a href="#" class="opener">Sites</a>
-											<div class="slide">
-												<p>Manage the pages of your website and track performance.</p>
-											</div>
-										</li>
-										<li>
-											<a href="#" class="opener">Calls-to-Action</a>
-											<div class="slide">
-												<p>Build beautiful buttons and callouts to convert traffic to leads in a snap</p>
-											</div>
-										</li>
-										<li>
-											<a href="#" class="opener">Landing Pages</a>
-											<div class="slide">
-												<p>Create more pages that improve conversion rates and generate leads.</p>
-											</div>
-										</li>	
-                                        <li>
-											<a href="#" class="opener">Forms</a>
-											<div class="slide">
-												<p>Ask the right questions at the right time to optimize lead conversions.</p>
-											</div>
-										</li>
-                                        <li>
-											<a href="#" class="opener">Lead Management</a>
-											<div class="slide">
-												<p>Segment leads based on their activity across your site and other channels.</p>
-											</div>
-										</li>
-                                        <li>
-											<a href="#" class="opener">Email</a>
-											<div class="slide">
-												<p>Personalize your emails with any field from your marketing database.</p>
-											</div>
-										</li>
-                                        <li>
-											<a href="#" class="opener">Marketing Automation</a>
-											<div class="slide">
-												<p>Use marketing automation to trigger timed follow up emails to your contacts.</p>
-											</div>
-										</li>	
-                                        <li>
-											<a href="#" class="opener">Analytics</a>
-											<div class="slide">
-												<p>See which traffic sources are generating the most leads, plus other insights.</p>
-											</div>
-										</li>
-                                        <li>
-											<a href="#" class="opener">Salesforce Sync</a>
-											<div class="slide">
-												<p>Use Salesforce data to segment contacts, personalize email, and more.</p>
-											</div>
-										</li>								
-									</ul>
-								</div>
-							</div>
-						</div>
-						<!-- grid-cols -->
+				<?php $this->widget('application.widgets.tab.TabWidget', array('_wID'=>21));?>
+				</div>
+			</div>
+		</div>
+		<!-- grid-cols -->
 		<div class="grid-cols">
 			<!-- col67 -->
 			<div class="col67">
 				<div class="col-holder">
-					<span class="image alignleft"><img src="<?php echo $themeUrl; ?>/images/portfolio-1.jpg" alt="image description" /></span>	
-					<h3>Well being of our clients first!</h3>
-					<h6>Lorem ipsum dolor sit amet, crossover corectetuer et adipiscing elit, sed diam nonummy nibh euismod tincidu ...</h6>									
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam. Nam liber tempor cum soluta nobis eleifend option congue nihil ...</p>
+					<?php $this->widget('application.widgets.CustomHtml.customHtml', array('_wID'=>22));?>
 				</div>
 			</div>						
 			<!-- col33 -->
