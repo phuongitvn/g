@@ -14,7 +14,7 @@
 											<dt>Điện thoại:</dt>
 											<dd>08 6268 0851</dd>
 											<dt>E-mail:</dt>
-											<dd><a href="mailto:contact@salefly.vn">info@salefly.vn</a></dd>
+											<dd><a href="mailto:info@thongtinquanly.com">info@thongtinquanly.com</a></dd>
 											<dt>MST:</dt><dd>0312153298</dd>
 										</dl>
 										<address>
@@ -32,15 +32,12 @@
 								<div class="col25">
 									<div class="col-holder">
 										<!-- useful-links -->									
-										<h4>Useful Links</h4>
+										<h4>Thư viện</h4>
 										<ul class="links">
-											<li><a href="#">Frequently Asked Questions</a></li>
-											<li><a href="#">Service Updates</a></li>
-											<li><a href="#">Community Forum</a></li>
-											<li><a href="#">Help Desk</a></li>
-											<li><a href="#">Validate License</a></li>
-											<li><a href="#">Coupons &amp; Discount!</a></li>
-											<li><a href="#">Privacy Policy</a></li>
+											<li><a href="#">Thư viện CRM+</a></li>
+											<li><a href="#">Thư viện POS+</a></li>
+											<li><a href="#">Thư viện Sale+</a></li>
+											<li><a href="#">Business solution zone</a></li>
 										</ul>
 									</div>
 								</div>
