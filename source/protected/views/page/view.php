@@ -1,2 +1,2 @@
 <?php
-echo $page->full_text;
+echo $page->fulltext;
