@@ -249,3 +249,14 @@ body>#body-container{
 	background: #428BCA!important;
 	color: #fff!important;
 }
+span#topic input,
+span#topic label{
+	float: left;
+}
+span#topic br{
+	clear: both
+}
+span#topic label{
+	margin: 0;
+	margin-left: 10px;
+}

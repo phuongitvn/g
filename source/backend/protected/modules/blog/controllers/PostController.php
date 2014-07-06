@@ -19,8 +19,10 @@ class PostController extends BackendApplicationController {
 
 		if (isset($_POST['BackendPostModel'])) {
 			$model->setAttributes($_POST['BackendPostModel']);
-
 			if ($model->save()) {
+				if(isset($_POST['topic'])){
+					$this->updateTopic($_POST['topic'], $model->id);
+				}
 				if (Yii::app()->getRequest()->getIsAjaxRequest())
 					Yii::app()->end();
 				else
@@ -30,21 +32,38 @@ class PostController extends BackendApplicationController {
 
 		$this->render('create', array( 'model' => $model));
 	}
-
+	private function updateTopic($post, $post_id)
+	{
+		if(count($post)>0){
+			$topicId = implode(',', $post);
+			$sql = "DELETE FROM tbl_blog_to_topic WHERE topic_id IN ($topicId) and blog_id={$post_id}";
+			$res = Yii::app()->db->createCommand($sql)->execute();
+			$insert = array();
+			foreach ($post as $topic){
+				$insert[] = "($topic, $post_id)";
+			}
+			$sql = "INSERT INTO tbl_blog_to_topic(topic_id,blog_id) VALUES";
+			$sql .= implode(',', $insert);
+			return Yii::app()->db->createCommand($sql)->execute();
+		}
+	}
 	public function actionUpdate($id) {
 		$model = $this->loadModel($id, 'BackendPostModel');
-
-
+		$topic = BackendPostModel::getTopic($id);
 		if (isset($_POST['BackendPostModel'])) {
 			$model->setAttributes($_POST['BackendPostModel']);
 
 			if ($model->save()) {
+				if(isset($_POST['topic'])){
+					$this->updateTopic($_POST['topic'], $model->id);
+				}
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
 		$this->render('update', array(
 				'model' => $model,
+				'topic' => $topic
 				));
 	}
 

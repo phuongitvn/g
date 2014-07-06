@@ -19,6 +19,20 @@
 		<?php echo $form->error($model,'intro_text'); ?>
 		</div><!-- row -->
 		<div class="row">
+		<?php echo CHtml::label('Topic', 'topic'); ?>
+		<?php 
+			$data = CHtml::listData(BackendTopicModel::model()->published()->findAll(), 'id', 'name');
+			$select = array();
+			if($topic){
+				foreach ($topic as $topicId){
+					$select[]=$topicId['topic_id'];
+				}
+			}
+			echo CHtml::checkBoxList('topic', $select, $data);
+		?>
+		<?php echo $form->error($model,'intro_text'); ?>
+		</div><!-- row -->
+		<div class="row">
 		<?php echo $form->labelEx($model,'content'); ?>
 		<?php
 		$this->widget('ext.elrte.elRTE', array(
@@ -45,18 +59,15 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model, 'status'); ?>
+		<?php 
+		$data = array(
+				BackendPostModel::STATUS_PUBLISHED => 'Public',
+				BackendPostModel::STATUS_DRAFT => 'Draft',
+				BackendPostModel::STATUS_ARCHIVED => 'Archived'
+		);
+		echo $form->dropDownList($model, 'status', $data);
+		?>
 		<?php echo $form->error($model,'status'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'create_time'); ?>
-		<?php echo $form->textField($model, 'create_time'); ?>
-		<?php echo $form->error($model,'create_time'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'update_time'); ?>
-		<?php echo $form->textField($model, 'update_time'); ?>
-		<?php echo $form->error($model,'update_time'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'author_id'); ?>
@@ -64,11 +75,8 @@
 		<?php echo $form->error($model,'author_id'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('comments')); ?></label>
-		<?php echo $form->checkBoxList($model, 'comments', GxHtml::encodeEx(GxHtml::listDataEx(CommentModel::model()->findAllAttributes(null, true)), false, true)); ?>
 
 <?php
-echo GxHtml::submitButton(Yii::t('main', 'Save'), array('class'=>'button p0 size1of1'));
 $this->endWidget();
 ?>
 </div><!-- form -->
