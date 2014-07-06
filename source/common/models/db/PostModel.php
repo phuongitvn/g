@@ -99,7 +99,7 @@ class PostModel extends BasePostModel
 	protected function afterSave()
 	{
 		parent::afterSave();
-		Tag::model()->updateFrequency($this->_oldTags, $this->tags);
+		TagModel::model()->updateFrequency($this->_oldTags, $this->tags);
 	}
 	
 	/**
