@@ -39,5 +39,5 @@ class RecentBlogPosts extends GPortlet
 		{
 			echo "<h4>{$this->title}</h4>\n";
 		}
-		}
+	}
 }

@@ -3,6 +3,11 @@ class BlogController extends FrontendController
 {
 	private $_model;
 	public $layout='//layouts/column1';
+	public function init()
+	{
+		$this->pageTitle = "Our Blog";
+		parent::init();
+	}
 	public function actionIndex()
 	{
 		$criteria=new CDbCriteria(array(
