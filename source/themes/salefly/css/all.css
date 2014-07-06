@@ -1464,7 +1464,9 @@ border: 1px solid #FF6041;
 }
 .portfolio-box h5 {margin:0 0 11px;}
 .main-container {
-	padding:4px 19px;
+	padding:4px 0;
+	max-width: 960px;
+	margin: 0 auto;
 }
 .main-container h1 {margin:0 0 8px;}
 .main-container h2 {margin:0 0 6px;}
