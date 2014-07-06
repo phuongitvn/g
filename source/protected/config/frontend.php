@@ -35,7 +35,7 @@ return CMap::mergeArray(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-			'rules'=>array(
+			/* 'rules'=>array(
 				''=>'site/index',
 				'<action:(login|logout|about|index)>' => 'site/<action>',
 				'<controller:(software|pricing|casestudies|testimonials|blog)>' => '<controller>/index',
@@ -43,6 +43,14 @@ return CMap::mergeArray(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+			), */
+			'rules'=>array(
+				'home'=>'site/index',
+				'<action:(login|logout|about|index)>' => 'site/<action>',
+				'page/<url_key_page:[a-zA-Z0-9-]+>' => 'page/view',
+				'<_c:\w+>/<url_key:[a-zA-Z0-9-]+>,<id:\d+>' => '<_c>/view',
+				'<_c:\w+>/<_a:\w+>/<id:\d+>' => '<_c>/<_a>',
+				'<_c:\w+>/<_a:\w+>' => '<_c>/<_a>',
 			),
 			'urlSuffix'		=>	'.html',
 			'showScriptName'=>false,

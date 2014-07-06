@@ -56,8 +56,8 @@ class MenuItemsController extends BackendApplicationController {
 			if(isset($_POST['BackendMenuItemsModel']['params'])){
 				$param = array();
 				if(isset($_POST['BackendMenuItemsModel']['params']['p']) && !empty($_POST['BackendMenuItemsModel']['params']['p'])){
-					if(strpos($_POST['MenuItems']['params']['p'], '&')!==FALSE){
-						$exp = explode('&', $_POST['MenuItems']['params']['p']);
+					if(strpos($_POST['BackendMenuItemsModel']['params']['p'], '&')!==FALSE){
+						$exp = explode('&', $_POST['BackendMenuItemsModel']['params']['p']);
 						foreach ($exp as $value){
 							$exp2 = explode('=', $value);
 							$param["{$exp2[0]}"] = $exp2[1];

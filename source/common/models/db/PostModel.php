@@ -29,7 +29,7 @@ class PostModel extends BasePostModel
 	{
 		return Yii::app()->createUrl('/blog/view', array(
 				'id'=>$this->id,
-				'title'=>$this->title,
+				'url_key'=>Common::makeFriendlyUrl($this->title),
 		));
 	}
 	

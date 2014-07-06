@@ -5,7 +5,7 @@ $action = Yii::app()->controller->action->id;
 ?>
 <!-- post-box -->
 <article class="post-box">
-	<span class="image alignleft listing"><img src="<?php echo $themeUrl;?>/images//blog-post-1-medium.jpg" alt="image description" /></span>
+	<span class="image alignleft listing"><img src="<?php echo $themeUrl;?>/images/blog-post-1-medium.jpg" alt="image description" /></span>
 	<div class="text-box">
 		<div class="meta">
 			<h3><?php echo CHtml::link(CHtml::encode($data->title), $data->url); ?></h3>

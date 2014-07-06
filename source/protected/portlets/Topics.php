@@ -13,7 +13,8 @@ class Topics extends GPortlet
 			echo '<ul class="links-list">';
 			foreach($topics as $key=>$topic)
 			{
-				$link = CHtml::link(CHtml::encode($topic->name), array('/topic/view','id'=>$topic->id));
+				$url = Yii::app()->createUrl('/topic/view', array('id'=>$topic->id, 'url_key'=>Common::makeFriendlyUrl($topic->name)));
+				$link = CHtml::link(CHtml::encode($topic->name), $url);
 				echo '<li>'.$link.'</li>';
 			}
 			echo '</ul>';
