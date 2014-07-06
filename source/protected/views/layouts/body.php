@@ -15,6 +15,6 @@ $themeUrl = Yii::app()->theme->baseUrl;
 </div>
 <!-- content -->
 <div class="container">
-<div id="content"><div class="c1"><?php echo $content; ?></div></div>
+<div id="content"><div class="c2"><?php echo $content; ?></div></div>
 </div>
 <?php $this->endContent(); ?>
