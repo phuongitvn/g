@@ -7,6 +7,6 @@ class PageController extends FrontendController
 		$id = Yii::app()->request->getParam('id');
 		$page = FrontendPagesModel::model()->findByPk($id);
 		$this->pageTitle = $page->title;
-		$this->render('view');
+		$this->render('view', compact('page'));
 	}
 }
