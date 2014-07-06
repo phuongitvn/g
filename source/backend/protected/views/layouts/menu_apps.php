@@ -10,8 +10,8 @@ $controller = Yii::app()->controller->getId();
 			<li><a class="yt-valign <?php if($module =='news' && $controller=='news') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/news/news/admin');?>"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;Articles Manager</a>
 				<?php if($module =='news' && ($controller=='news' || $controller=='categories') || $module=='files'){?>
 				<ul class="sub-menu">
-					<li><a class="yt-valign <?php if($module =='news' && $controller=='categories') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/news/categories/admin');?>">Categories Manager</a></li>
-					<li><a class="yt-valign <?php if($module =='files') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/files/files/admin');?>">File Manager</a></li>
+					<li><a class="yt-valign <?php if($module =='news' && $controller=='categories') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/news/categories/admin');?>">+&nbsp;Categories Manager</a></li>
+					<li><a class="yt-valign <?php if($module =='files') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/files/files/admin');?>">+&nbsp;File Manager</a></li>
 				</ul>
 				<?php }?>
 			</li>
@@ -20,10 +20,10 @@ $controller = Yii::app()->controller->getId();
 			<li><a class="yt-valign <?php if($module=='polls') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/polls/poll/admin');?>"><i class="glyphicon glyphicon-tasks"></i>&nbsp;Polls Manager</a></li>
 			<li><a class="yt-valign <?php if($module=='menu') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/menu/menus/admin');?>"><i class="glyphicon glyphicon-align-justify"></i>&nbsp;Menu Manager</a></li>
 			<li><a class="yt-valign <?php if($module=='gallery') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/gallery/galleryItems/admin');?>"><i class="glyphicon glyphicon-picture"></i>&nbsp;Gallery Manager</a></li>
-			<li><a class="yt-valign <?php if($module=='blog') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/blog/post/admin');?>"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Blog Manager</a>
+			<li><a class="yt-valign <?php if($module=='blog' && $controller=='post') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/blog/post/admin');?>"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Blog Manager</a>
 				<?php if($module =='blog' ){?>
 				<ul class="sub-menu">
-					<li><a class="yt-valign <?php if($module =='blog' && $controller=='topic') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/blog/topic/admin');?>">Topic Manager</a></li>
+					<li><a class="yt-valign <?php if($module =='blog' && $controller=='topic') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/blog/topic/admin');?>">+&nbsp;Topic Manager</a></li>
 				</ul>
 				<?php }?>
 			</li>

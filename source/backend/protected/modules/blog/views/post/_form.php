@@ -23,7 +23,7 @@
 		<?php 
 			$data = CHtml::listData(BackendTopicModel::model()->published()->findAll(), 'id', 'name');
 			$select = array();
-			if($topic){
+			if(isset($topic)){
 				foreach ($topic as $topicId){
 					$select[]=$topicId['topic_id'];
 				}

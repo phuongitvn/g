@@ -23,7 +23,6 @@ $('.search-form form').submit(function(){
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
-		'id',
 		'title',
 		'intro_text',
 		'tags',
@@ -37,6 +36,7 @@ $('.search-form form').submit(function(){
 				'filter'=>GxHtml::listDataEx(UserWebModel::model()->findAllAttributes(null, true)),
 				),
 		*/
+		'id',
 		array(
 			'class'=>'application.widgets.iButtonColumn',
 			'htmlOptions'=>array('width'=>'50'),
