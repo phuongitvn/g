@@ -83,7 +83,7 @@ class PostModel extends BasePostModel
 		{
 			if($this->isNewRecord)
 			{
-				$this->create_time=$this->update_time=time();
+				$this->create_time=$this->update_time = date('Y-m-d H:i:s');
 				$this->author_id=Yii::app()->user->id;
 			}
 			else
