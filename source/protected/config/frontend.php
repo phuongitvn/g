@@ -9,7 +9,7 @@ return CMap::mergeArray(
 	require_once dirname(__FILE__).'../../../common/config/common.php',
 	array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Sale Fly',
+	'name'=>'Thông Tin Quản Lý',
 	'theme'=>'salefly',
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -56,9 +56,6 @@ return CMap::mergeArray(
 			'showScriptName'=>false,
 		),
 		
-		/* 'db'=>array(
-			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		), */
 		// uncomment the following to use a MySQL database
 		/* 'errorHandler'=>array(
 			// use 'site/error' action to display errors
