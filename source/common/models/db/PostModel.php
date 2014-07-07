@@ -87,7 +87,7 @@ class PostModel extends BasePostModel
 				$this->author_id=Yii::app()->user->id;
 			}
 			else
-				$this->update_time=time();
+				$this->update_time=date('Y-m-d H:i:s');
 			return true;
 		}
 		else
