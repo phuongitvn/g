@@ -77,7 +77,7 @@ class TagModel extends BaseTagModel
 		{
 			if(!$this->exists('name=:name',array(':name'=>$name)))
 			{
-				$tag=new Tag;
+				$tag=new self();
 				$tag->name=$name;
 				$tag->frequency=1;
 				$tag->save();
