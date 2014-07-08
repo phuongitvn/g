@@ -27,15 +27,15 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 			<!-- title-box -->
 			<div class="title-box">
 				<h2>ISM - THÔNG TIN QUÁN LÝ</h2>
-				<p>Chúng tôi tư vấn để giúp doanh nghiệp quản lý được thông tin một cách hiệu quả, tiết kiệm chi phí và đem lại lợi nhuận cao nhât.</p>
+				<p>Phương châm tư vấn của chúng tôi là chú trọng đến sự phù hợp. Phát triển và triển khai giải pháp thật sự tin cậy cho doanh nghiệp. Đồng thời, với sự đam mê với nghề chúng tôi hoàn toàn có thể hứa với Quý khách hàng về việc hỗ trợ KH dài lâu.</p>
 			</div>
 			<!-- boxes-section -->
 			<div class="boxes-section">
 				<article class="col">
 					<a href="#"><div class="icon ico1"></div></a>
 					<div class="text-box">
-						<h3>Tư vấn giải pháp</h3>
-						<p>Blogging software that fuels lead generation.</p>
+						<h3>Tư vấn sự phù hợp</h3>
+						<p>Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất.</p>
 						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>
@@ -43,7 +43,7 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 					<a href="#"><div class="icon ico2"></div></a>
 					<div class="text-box">
 						<h3>Cung ứng giải pháp tin cậy</h3>
-						<p>Create a powerful landing page in 3 easy steps</p>
+						<p>Đề cao tinh thần trách nhiệm, chúng tôi luôn mang giải pháp thực đến Quý khách hàng</p>
 						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>
@@ -51,7 +51,7 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 					<a href="#"><div class="icon ico3"></div></a>
 					<div class="text-box">
 						<h3>Hỗ trợ khách hàng lâu dài</h3>
-						<p>All your analytics in one place.</p>
+						<p>Đây là phương châm sống còn của chúng tôi!</p>
 						<a href="#" class="btn">Đọc thêm</a>
 					</div>
 				</article>

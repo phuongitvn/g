@@ -5,7 +5,7 @@ $action = Yii::app()->controller->action->id;
 ?>
 <!-- post-box -->
 <article class="post-box">
-<?php if($controller=='blog' && $action=='index'){?>
+<?php if(($controller=='blog' && $action=='index') || ($controller=='topic' && $action=='view')){?>
 	<span class="image alignleft listing"><img src="<?php echo $themeUrl;?>/images/blog-post-1-medium.jpg" alt="image description" /></span>
 	<?php }?>
 	<div class="text-box">
@@ -16,7 +16,7 @@ $action = Yii::app()->controller->action->id;
 		<p>
 			<?php
 			$this->beginWidget('CMarkdown', array('purifyOutput'=>true));
-			if($controller=='blog' && $action=='index'){
+			if(($controller=='blog' && $action=='index') || ($controller=='topic' && $action=='view')){
 				echo $data->intro_text;
 			}else{
 				echo $data->content;
