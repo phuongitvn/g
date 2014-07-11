@@ -6,7 +6,7 @@ $action = Yii::app()->controller->action->id;
 <!-- post-box -->
 <article class="post-box">
 <?php if(($controller=='blog' && $action=='index') || ($controller=='topic' && $action=='view')){?>
-	<span class="image alignleft listing"><img src="<?php echo $themeUrl;?>/images/blog-post-1-medium.jpg" alt="image description" /></span>
+	<span class="image alignleft listing"><img src="<?php echo AvatarHelper::getAvatarUrl($data->id, "s1", "blog");?>" alt="image description" /></span>
 	<?php }?>
 	<div class="text-box">
 		<div class="meta">

@@ -13,6 +13,8 @@ return array(
 		'shop_url'		=>	SITE_URL.'/storage/productimages',
 		'files_path'	=> 	SITE_PATH.DS.'storage'.DS.'files',
 		'files_url'		=>	SITE_URL.'/storage/files',
+		'blog_path'		=> 	SITE_PATH.DS.'storage'.DS.'blog',
+		'blog_url'		=>	SITE_URL.'/storage/blog',
 		'images_available'=>array(
 			'full'=>array(
 				'width'=>600,
@@ -47,6 +49,12 @@ return array(
 			'category_thumb_width'=>835,
 			'category_thumb_height'=>271,
 		),
+		'tmp_upload'=>'E:\source\GITHUB\gcms\source\storage\tmp\\',
+		'imageSize'=>array( // order tu thap len cao
+				's0'=>600,
+            	's1'=>220,
+            ),
+		'blogDir'=>'E:\source\GITHUB\gcms\source\storage\blog',
 		'adminEmail'	=>	'phuong.nguyen.itvn@gmail.com',
 	),
 );

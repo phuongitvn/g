@@ -19,6 +19,7 @@ array(
 		'application.modules.user.components.*',
 		'application.modules.srbac.controllers.SBaseController',
 		'application.modules.srbac.models.*',
+		'application.vendors.utilities.*',
 		//'ext.bootstrap.*',
 		'ext.giix-components.*',
 		'ext.giix-core.*',

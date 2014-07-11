@@ -15,11 +15,16 @@ class PostController extends BackendApplicationController {
 
 	public function actionCreate() {
 		$model = new BackendPostModel;
-
-
 		if (isset($_POST['BackendPostModel'])) {
 			$model->setAttributes($_POST['BackendPostModel']);
 			if ($model->save()) {
+				if(isset($_POST['BackendPostModel']['file']) && $_POST['BackendPostModel']['file']!=''){
+					$filePath = Yii::app()->params['tmp_upload'].DS.$_POST['BackendPostModel']['file'];
+					if(file_exists($filePath)){
+						AvatarHelper::processAvatar($model->id, $filePath, 'blog');
+					}
+				}
+				
 				if(isset($_POST['topic'])){
 					$this->updateTopic($_POST['topic'], $model->id);
 				}
@@ -54,6 +59,12 @@ class PostController extends BackendApplicationController {
 			$model->setAttributes($_POST['BackendPostModel']);
 
 			if ($model->save()) {
+				if(isset($_POST['BackendPostModel']['file']) && $_POST['BackendPostModel']['file']!=''){
+					$filePath = Yii::app()->params['tmp_upload'].DS.$_POST['BackendPostModel']['file'];
+					if(file_exists($filePath)){
+						AvatarHelper::processAvatar($model->id, $filePath, 'blog');
+					}
+				}
 				if(isset($_POST['topic'])){
 					$this->updateTopic($_POST['topic'], $model->id);
 				}

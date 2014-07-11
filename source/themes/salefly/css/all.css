@@ -1437,7 +1437,8 @@ border: 1px solid #FF6041;
 .portfolio-box {
 	overflow:hidden;
 	padding:0 0 28px;
-	margin:0 20px 11px;
+	margin:0 auto;
+	width: 960px;
 	border-bottom:1px solid #e4e4e4;
 }
 .portfolio-box.last {

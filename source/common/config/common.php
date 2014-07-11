@@ -8,9 +8,7 @@ return CMap::mergeArray(
 			'common.models.db.*',
 			'common.models.db._base.*',
 			'common.extensions.giix-components.*',
-		),
-		'params'=> array(
-			'frontend_site_url'=>'http://localhost:8989/'
+			'common.helpers.*'
 		)
 	)
 );

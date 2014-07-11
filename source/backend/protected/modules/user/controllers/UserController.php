@@ -39,7 +39,8 @@ class UserController extends BackendApplicationController
 	 */
 	public function actionView()
 	{
-		$model = $this->loadModel();
+		$id = Yii::app()->request->getParam('id');
+		$model = $this->loadModel($id, 'User');
 		$this->render('view',array(
 			'model'=>$model,
 		));
@@ -64,23 +65,6 @@ class UserController extends BackendApplicationController
 			'dataProvider'=>$dataProvider,
 		));
 	}
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 */
-	public function loadModel()
-	{
-		if($this->_model===null)
-		{
-			if(isset($_GET['id']))
-				$this->_model=User::model()->findbyPk($_GET['id']);
-			if($this->_model===null)
-				throw new CHttpException(404,'The requested page does not exist.');
-		}
-		return $this->_model;
-	}
-
 
 	/**
 	 * Returns the data model based on the primary key given in the GET variable.
