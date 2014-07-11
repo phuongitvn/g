@@ -86,7 +86,10 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 			<div class="col33">
 				<div class="col-holder testimonials">
 					<!-- testimonials-item -->
-					<h3>Client Testimonials</h3>
+					<div class="social">
+						<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fthongtinquanly&amp;width=240&amp;height=248&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23E5E5E5&amp;stream=false&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:245px; height:250px;" ></iframe>
+					</div>
+					<!-- <h3>Client Testimonials</h3>
 					<ul>
 						<li>
 							<img class="image" src="<?php echo $themeUrl; ?>/images/testimonial-2.jpg" alt="image description" />
@@ -96,6 +99,7 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 							</blockquote>
 						</li>
 					</ul>
+					-->
 				</div>
 			</div>
 		</div>
