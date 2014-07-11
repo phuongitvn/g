@@ -32,7 +32,6 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
 }
 blockquote, q {
 	quotes: none;
@@ -55,7 +54,7 @@ html {background: url(../images/body-bg.jpg) 0 0 repeat;}
 body {
 	margin:0;
 	font:13px/21px Arial, Helvetica, sans-serif;
-	color:#666;
+	color:#000;
 	min-width:320px;
 	background:#fbfbfb;
 	-webkit-text-size-adjust:none;
@@ -1146,7 +1145,6 @@ a:hover .icon.ico6{background:url(../images/ico6-hover.png) no-repeat;}
 .post-box .meta h3 a:hover {color:#ff6041;}
 .post-box a:hover {text-decoration:none;}
 .post-box .text-box {
-	overflow:hidden;
 	height:1%;
 }
 .post-box .text-box h3 {
