@@ -19,3 +19,11 @@ body
 	max-width: 960px;
 	margin: 0 auto;
 }
+ul.breadcrumbs li,
+ul.social li,
+.portlet-content ul li,
+ul.photos li,
+#footer ul li,
+#nav li, .sponsors li, .testimonials ul li, .accordion li{
+	list-style-type: none!important;
+}
