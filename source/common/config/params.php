@@ -1,6 +1,4 @@
 <?php
-define('SITE_URL', 'http://localhost:8989');
-define('SITE_PATH', dirname(dirname(dirname(__FILE__))));
 return array(
 	'params'=>array(
 		'site_url'		=>	SITE_URL,
