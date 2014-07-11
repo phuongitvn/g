@@ -27,6 +27,6 @@ ul.photos li,
 #nav li, .sponsors li, .testimonials ul li, .accordion li{
 	list-style-type: none!important;
 }
-ul.links, .blog-links ul{
+ul.links, .blog-links ul, .tweets ul{
 	padding: 0;
 }
