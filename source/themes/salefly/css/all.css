@@ -253,6 +253,7 @@ h6 {
 	background:url(../images/drop-arrow.png) no-repeat 100% 8px;
 }
 .nav-box > ul ul {
+	padding: 0;
 	position:absolute;
 	top:39px;
 	left:0;
