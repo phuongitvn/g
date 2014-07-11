@@ -27,7 +27,7 @@ Yii::app()->getClientScript()->registerScriptFile("$themeUrl/js/jquery.prettyPho
 			<!-- title-box -->
 			<div class="title-box">
 				<h2>ISM - THÔNG TIN QUÁN LÝ</h2>
-				<p>Phương châm tư vấn của chúng tôi là chú trọng đến sự phù hợp. Phát triển và triển khai giải pháp thật sự tin cậy cho doanh nghiệp. Đồng thời, với sự đam mê với nghề chúng tôi hoàn toàn có thể hứa với Quý khách hàng về việc hỗ trợ KH dài lâu.</p>
+				<p>Phương châm tư vấn của chúng tôi là chú trọng đến sự phù hợp. Phát triển và triển khai giải pháp thật sự tin cậy cho doanh nghiệp. Đồng thời, với sự đam mê nghề chúng tôi hoàn toàn có thể cam kết với Quý khách hàng về việc hỗ trợ dài lâu.</p>
 			</div>
 			<!-- boxes-section -->
 			<div class="boxes-section">

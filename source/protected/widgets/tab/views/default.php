@@ -3,7 +3,7 @@
 <?php 
 $i=0;
 foreach($data as $key => $item):?>
-<li <?php if($i==0){?>class="active"<?php }?>>
+<li>
 	<a href="#" class="opener"><?php echo $item['title']?></a>
 	<div class="slide">
 		<?php echo $item['description']?>
