@@ -49,12 +49,11 @@ return array(
 			'category_thumb_width'=>835,
 			'category_thumb_height'=>271,
 		),
-		'tmp_upload'=>'E:\source\GITHUB\gcms\source\storage\tmp\\',
+		'tmp_upload'=>SITE_PATH.DS.'storage'.DS.'tmp'.DS,
 		'imageSize'=>array( // order tu thap len cao
 				's0'=>600,
             	's1'=>220,
             ),
-		'blogDir'=>'E:\source\GITHUB\gcms\source\storage\blog',
 		'adminEmail'	=>	'phuong.nguyen.itvn@gmail.com',
 	),
 );
