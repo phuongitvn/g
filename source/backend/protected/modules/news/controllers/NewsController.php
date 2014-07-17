@@ -26,6 +26,12 @@ class NewsController extends BackendApplicationController
 			$model->created_by 	= Yii::app()->user->id;
 			$model->modified_by = Yii::app()->user->id;
 			if ($model->save()) {
+				if(isset($_POST['BackendNewsModel']['file']) && $_POST['BackendNewsModel']['file']!=''){
+					$filePath = Yii::app()->params['tmp_upload'].DS.$_POST['BackendNewsModel']['file'];
+					if(file_exists($filePath)){
+						AvatarHelper::processAvatar($model->id, $filePath, 'news');
+					}
+				}
 				if (Yii::app()->request->isAjaxRequest)
 					Yii::app()->end();
 				else{
@@ -49,6 +55,12 @@ class NewsController extends BackendApplicationController
 			
 			$model->modified_by = Yii::app()->user->id;
 			if ($model->save()) {
+				if(isset($_POST['BackendNewsModel']['file']) && $_POST['BackendNewsModel']['file']!=''){
+					$filePath = Yii::app()->params['tmp_upload'].DS.$_POST['BackendNewsModel']['file'];
+					if(file_exists($filePath)){
+						AvatarHelper::processAvatar($model->id, $filePath, 'news');
+					}
+				}
 				Yii::app()->user->setFlash('success','Edit was successfully updated.');
 				if($_POST['apply']==1){
 						$this->redirect(array('update', 'id' => $model->id));

@@ -124,81 +124,25 @@ $form = $this->beginWidget('GxActiveForm', array(
 		</div>
 	</div>
 	<div id="images">
-	<?php if(!empty($model->id)):?>
-		<?php 
-		$images = ($model->images!='')?unserialize($model->images):null;
-		$Images_Types = BackendContentImagesModel::model()->findAll();
-		if(count($Images_Types)>0){
-			foreach ($Images_Types as $value){
-				$image = ($images!=null && isset($images["{$value['name']}"]))?Yii::app()->params['storage_url'].$images["{$value['name']}"]["url"]:'';
-				$size = Array();
-				if($image!=''){
-					$size = @getimagesize($image);
-				}
-				?>
-				
-				<div class="el-dialogform" style="clear:both">
-				<fieldset>
-					<legend><label><?php echo $value['name']?> (<?php echo $value['width'].'x'.$value['height']?>)</label></legend>
-					
-					<div id="uploaded_<?php echo $value['name']?>">
-						<?php if($size):?>
-						<div><?php echo $size[0].'x'.$size[1];?></div>
-						<?php endif;?>
-						<?php if(isset($images["{$value['name']}"])):?>
-						<img id="<?php echo $value['name'];?>_image" width="<?php echo $value['width']?>" height="<?php echo $value['height']?>" src="<?php echo $image;?>" />
-						<?php else:?>
-						<img src="<?php echo Yii::app()->theme->baseUrl;?>/images/default.gif" />
-						<?php endif;?>
-					</div>
-					<br class="clear" />
-					<div class="wb-upload">
-					<?php $this->widget('MUploadify',array(
-						'name'=>'myPicture['.$value['name'].']',
-						'buttonText'=>Yii::t('app','Upload Image'),
-						'script'=>array('/news/news/upload'),
-						'model_id'=>$model->id,
-						'fileExt'=>'*.jpg;*.png;',
-						'auto'=>true,
-						'size_x'=>$value['width'],
-						'size_y'=>$value['height'],
-					  //fileDesc=>Yii::t('application','Image files'),
-					  //'uploadButton'=>true,
-					  //'uploadButtonText'=>'Upload new',
-					  //'uploadButtonTagname'=>'button',
-					  //'uploadButtonOptions'=>array('class'=>'myButton'),
-						'onComplete'=>'js:function(event, id, obj,respone, data){
-							if(respone=="error_file_type"){
-								alert("Upload lỗi.Kiểu file không hợp lệ.")
-							}else if(respone=="error_file_upload"){
-								alert("Lỗi upload.Không thể upload file.Hãy kiểm tra lại quyền thư mục upload file.")
-							}else{
-							 	$("#uploaded_'.$value['name'].'").html("<img src=\""+respone+"\" />");
-							 	$("#wb-del-'.$value['name'].'").html("<a class=\"wb-del\" href=\"javascript:void(0);\" onclick=\"DelImage(\''.$value['name'].'\','.$model->id.');\" >'.Yii::t('app','Delete').'</a>");
-							}
-						}',
-					));
-					?>
-					</div>
-					<div class="toolb-i">
-						<div id="wb-del-<?php echo $value['name'];?>">
-							<?php if(!empty($images["{$value['name']}"])):?>
-							<a class="wb-del" href="javascript:void(0);" onclick="DelImage('<?php echo $value['name'];?>',<?php echo $model->id;?>);">
-							<?php echo Yii::t('app','Delete');?>
-							</a>
-							<?php endif;?>
-						</div>
-					</div>
-					
-				</fieldset>
-				</div>
-				<?php
-			}
-		}
-	?>
-	<?php else:?>
-	<i><?php echo Yii::t('app','You must save this article before upload image.')?></i>
-	<?php endif;?>
+		<div class="row">
+		<div id="img_tmp"><img src="<?php echo AvatarHelper::getAvatarUrl($model->id, "s1","news")?>" /></div>
+		<?php $this->widget('ext.EAjaxUpload.EAjaxUpload',
+			array(
+			        'id'=>'uploadFile',
+			        'config'=>array(
+			               'action'=>Yii::app()->createUrl('/site/upload'),
+			               'allowedExtensions'=>array("jpg"),//array("jpg","jpeg","gif","exe","mov" and etc...
+			               'sizeLimit'=>10*1024*1024,// maximum file size in bytes
+			               'minSizeLimit'=>1,// minimum file size in bytes
+			               'onComplete'=>"js:function(id, fileName, responseJSON){ 
+			        			$('#img_tmp').html('<img width=\"200\" src=\"".Yii::app()->params['storage_url']."/tmp/"."'+fileName+'\" />'); 
+								$('#BackendNewsModel_file').attr('value',fileName)
+							}",
+			              )
+			)); 
+		?>
+		<?php echo CHtml::hiddenField('BackendNewsModel[file]')?>
+		</div>
 	</div>
 	<div id="add-files">
 		<a style="color: #fff;float: right;" id="files-list" class="btn btn-success small"><i class="icon-plus-sign icon-white"></i>Thêm file</a>

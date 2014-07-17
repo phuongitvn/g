@@ -11,6 +11,8 @@ return array(
 		'shop_url'		=>	SITE_URL.'/storage/productimages',
 		'files_path'	=> 	SITE_PATH.DS.'storage'.DS.'files',
 		'files_url'		=>	SITE_URL.'/storage/files',
+		'news_path'		=> 	SITE_PATH.DS.'storage'.DS.'news',
+		'news_url'		=>	SITE_URL.'/storage/news',
 		'blog_path'		=> 	SITE_PATH.DS.'storage'.DS.'blog',
 		'blog_url'		=>	SITE_URL.'/storage/blog',
 		'images_available'=>array(
@@ -48,10 +50,10 @@ return array(
 			'category_thumb_height'=>271,
 		),
 		'tmp_upload'=>SITE_PATH.DS.'storage'.DS.'tmp'.DS,
-		'imageSize'=>array( // order tu thap len cao
-				's0'=>600,
-            	's1'=>220,
-            ),
+		'imageSize'=>array(
+				'news'=>array('s0'=>620,'s1'=>200),
+				'blog'=>array('s0'=>600,'s1'=>220),
+				),
 		'adminEmail'	=>	'phuong.nguyen.itvn@gmail.com',
 	),
 );

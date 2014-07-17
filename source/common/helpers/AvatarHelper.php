@@ -4,7 +4,7 @@ class AvatarHelper {
 	public static function processAvatar($id, $source, $type = "blog") {
 
 		$fileSystem = new Filesystem();
-		$alowSize = Yii::app()->params['imageSize'];
+		$alowSize = Yii::app()->params['imageSize']["$type"];
 		$maxSize = max($alowSize);
 		$folderMax = "s0";
 		$pathDir = Yii::app()->params[$type.'_path'];
@@ -40,9 +40,9 @@ class AvatarHelper {
 				}
 
 				if ($k == $folderMax) {
-					$imgCrop->resizeRatio($v, $desWidth, $desHeight, 70);
+					$imgCrop->resizeRatio($v, $desWidth, $desHeight, 100);
 				} else {
-					$imgCrop->resizeCrop($v, $desWidth, $desHeight, 70);
+					$imgCrop->resizeCrop($v, $desWidth, $desHeight, 100);
 				}
 			}
 			//remove file source

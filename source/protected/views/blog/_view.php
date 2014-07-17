@@ -1,5 +1,4 @@
 <?php 
-$themeUrl = Yii::app()->theme->baseUrl;
 $controller = Yii::app()->controller->id;
 $action = Yii::app()->controller->action->id;
 ?>
