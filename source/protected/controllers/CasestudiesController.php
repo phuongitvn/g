@@ -7,7 +7,6 @@ class CasestudiesController extends FrontendController
 		$criteria->condition = "status=:status AND type='post'";
 		$criteria->order = "ordering ASC, id DESC";
 		$criteria->params = array(':status'=>WebArticleModel::STATUS_PUBLISHED);
-		$data = WebArticleModel::model()->findAll($criteria);
 		
 		$dataProvider=new CActiveDataProvider('WebArticleModel', array(
 				'pagination'=>array(
@@ -16,7 +15,7 @@ class CasestudiesController extends FrontendController
 				'criteria'=>$criteria,
 		));
 		
-		$this->render('index', compact('data','dataProvider'));
+		$this->render('index', compact('dataProvider'));
 	}
 	public function actionView()
 	{

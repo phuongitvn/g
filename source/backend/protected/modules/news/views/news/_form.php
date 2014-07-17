@@ -32,7 +32,7 @@ $form = $this->beginWidget('GxActiveForm', array(
 		<?php echo $form->errorSummary($model); ?>
 		<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('PostStatus')); ?>
+		<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus')); ?>
 		</div>
 		<div class="row">
 		<?php echo $form->labelEx($model,'title'); ?>
