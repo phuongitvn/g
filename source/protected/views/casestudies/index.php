@@ -27,7 +27,7 @@ Yii::app()->getClientScript()->registerScript(
 		<div class="page-title">
 			<!-- breadcrumbs -->
 			<ul class="breadcrumbs">
-				<li><a href="<?php echo Yii::app()->createUrl('/site');?>">Trang Chủ</a></li>
+				<li><a href="<?php echo Yii::app()->createUrl('/site/index');?>">Trang Chủ</a></li>
 				<li>/</li>	
 				<li><a href="<?php echo Yii::app()->createUrl('/casestudies');?>">Casestudies</a></li>
 			</ul>
