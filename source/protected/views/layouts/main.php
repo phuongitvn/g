@@ -8,7 +8,7 @@
 				<header id="header">
 					<!-- section -->
 					<div class="section">
-						<h1 class="logo"><a href="<?php echo Yii::app()->createUrl('/site/index');?>"><img width="250" src="<?php echo Yii::app()->theme->baseUrl?>/images/logo.png" /></a></h1>
+						<h1 class="logo"><a href="<?php echo Yii::app()->createUrl('/site');?>"><img width="250" src="<?php echo Yii::app()->theme->baseUrl?>/images/logo.png" /></a></h1>
 						<div class="contact-box">
 							<strong class="phone">HOTLINE: <span>0902 807 007</span></strong>
 							<!-- social -->
