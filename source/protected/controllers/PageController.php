@@ -10,6 +10,13 @@ class PageController extends FrontendController
 		$criteria->params = array(':alias'=>$urlKey);
 		$page = FrontendPagesModel::model()->findByAttributes(array('alias'=>$urlKey));
 		$this->pageTitle = $page->title;
-		$this->render('view', compact('page'));
+		
+		$parentId = ($page->parent==0)?$page->id:$page->parent;
+		$criteria = new CDbCriteria;
+		$criteria->condition = "parent=:pid";
+		$criteria->params = array(':pid'=>$parentId);
+		$childPages = FrontendPagesModel::model()->findAll($criteria);
+		
+		$this->render('view', compact('page','childPages'));
 	}
 }

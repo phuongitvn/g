@@ -133,7 +133,7 @@ class FrontendController extends CController
 	 * @param array $params
 	 * @param String $ampersand
 	 */
-	public function createUrlPage($pageId, $route='/site/page', $params=array(), $ampersand='&')
+	public function createUrlPage($pageId, $route='/page/view', $params=array(), $ampersand='&')
 	{
 		if($route==='')
 			$route=$this->getId().'/'.$this->getAction()->getId();
@@ -146,7 +146,7 @@ class FrontendController extends CController
 		$page = FrontendPagesModel::model()->published()->findByPk($pageId);
 		$language = Yii::app()->language;
 		$field = ($language==Yii::app()->params['language_default'])?"alias":"alias_".$language;
-		$params['alias'] 	= $page->alias;
+		$params['url_key_page'] = $page->alias;
 		if(Yii::app()->params['multilang'] && !isset($params['lang'])){
 			if(isset($_GET['lang']) && $_GET['lang']!='' && $_GET['lang']!=Yii::app()->params['language_default']){
 				$params['lang']=$_GET['lang'];

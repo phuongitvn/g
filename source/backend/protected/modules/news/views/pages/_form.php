@@ -18,13 +18,14 @@
 	</div><!-- row -->
 	<div class="row">
 	<?php echo $form->labelEx($model,'status'); ?>
-	<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('PostStatus')); ?>
+	<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus')); ?>
 	</div>
 	<div class="row">
 	<?php echo $form->labelEx($model,'ordering'); ?>
 	<?php echo $form->textField($model, 'ordering'); ?>
 	<?php echo $form->error($model,'ordering'); ?>
 	</div>
+	<!-- 
 	<div class="row">
 		<?php echo $form->labelEx($model,'language'); ?>
 		<?php 
@@ -32,6 +33,16 @@
 			echo $form->dropDownList($model,'language', $langs);
 		?>
 		<?php echo $form->error($model,'language'); ?>
+	</div>-->
+	<div class="row">
+		<?php echo $form->labelEx($model,'catid'); ?>
+		<?php
+			$call_cats =BackendCategoriesModel::model()->findAll('published=:p ORDER BY position ASC', array(':p'=>1));
+			$cats = CHtml::listData($call_cats, 'id', 'title_tree');
+			echo $form->dropDownList($model,'catid', $cats);
+			
+		?>
+		<?php echo $form->error($model,'catid'); ?>
 	</div><!-- row -->
 	<div class="row">
 	<?php echo $form->labelEx($model,'parent'); ?>

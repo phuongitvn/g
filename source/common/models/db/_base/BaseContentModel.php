@@ -81,7 +81,7 @@ abstract class BaseContentModel extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
-			'catid' => Yii::t('app', 'Catid'),
+			'catid' => Yii::t('app', 'Category'),
 			'parent' => Yii::t('app', 'Parent'),
 			'title' => Yii::t('app', 'Title'),
 			'alias' => Yii::t('app', 'Alias'),
