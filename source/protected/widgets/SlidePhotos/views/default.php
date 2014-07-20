@@ -44,7 +44,7 @@
 				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
 					Quản trị theo mục tiêu,<br /> hiệu quả từng tác vụ!
 				</div>
-				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
+				<div class="caption slide_paragraph sfb" data-x="40" data-y="224" data-speed="700" data-start="1700" data-easing="easeOutQuad">
 					Chúng tôi chú trọng sự phù hợp của giải pháp<br /> cho doanh nghiệp hơn là sự tốt nhất.
 				</div>
 				<div class="caption slide_button sfb" data-x="40" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutQuad">

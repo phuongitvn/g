@@ -15,7 +15,7 @@ class PageController extends FrontendController
 		$criteria = new CDbCriteria;
 		$criteria->condition = "parent=:pid";
 		$criteria->params = array(':pid'=>$parentId);
-		$childPages = FrontendPagesModel::model()->findAll($criteria);
+		$childPages = FrontendPagesModel::model()->published()->findAll($criteria);
 		
 		$this->render('view', compact('page','childPages'));
 	}
