@@ -9,7 +9,7 @@
 				<!-- THE CAPTIONS IN THIS SLDIE -->
 				<div class="caption lfr" data-x="440" data-y="2" data-speed="1000" data-start="750" data-easing="easeOutQuad"><img src="<?php echo $themeUrl; ?>/images/slider-revolution-1.png" alt="Image 1" /></div>
 				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutExpo">
-					Solutions, <br />that you need!
+					Giải pháp tin cậy, <br />hỗ trợ dài lâu!
 				</div>
 				<div class="caption slide_subtitle sfb" data-x="40" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutExpo">
 					propositions for everybody!
@@ -29,10 +29,11 @@
 				<!-- THE CAPTIONS IN THIS SLDIE -->
 				<div class="caption lfl" data-x="0" data-y="2" data-speed="1000" data-start="750" data-easing="easeOutQuad"><img src="<?php echo $themeUrl; ?>/images/slider-revolution-2.png" alt="Image 2" /></div>
 				<div class="caption slide_title sfb" data-x="564" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
-					Be successful, <br />it's easy!
+					Luôn mang đến sự phù hợp! <br />
+					Giải pháp linh hoạt để ứng dụng phù hợp hơn!
 				</div>
 				<div class="caption slide_subtitle sfb" data-x="564" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutQuad">
-					we work for your profit!
+					Quản trị theo mục tiêu, hiệu quả từng tác vụ!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="564" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
 					We are proud to deliver immediate results through<br /> active skills, and real-world tasks that are instantly <br />relevant
@@ -62,27 +63,6 @@
 					<a href="http://themeforest.net/user/atix" class="btn">continue reading</a>
 				</div>
 			</li>
-			<!-- THE FOURTH SLIDE -->
-			<li data-transition="boxfade" data-slotamount="10" data-masterspeed="300">
-				<!-- THE MAIN IMAGE IN THE FOURTH SLIDE -->                       
-				<img src="<?php echo $themeUrl; ?>/images/slider-revolution-4-bg.jpg" alt="" />
-				<!-- THE CAPTIONS IN THIS SLDIE -->                        
-				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
-					Play Videos!
-				</div>
-				<div class="caption slide_subtitle sfb" data-x="40" data-y="180" data-speed="900" data-start="1500" data-easing="easeOutQuad">
-					plus use custom backgrounds!
-				</div>
-				<div class="caption slide_paragraph sfb" data-x="40" data-y="230" data-speed="700" data-start="1700" data-easing="easeOutQuad">
-					Showcase your projects, jobs, employees and <br />company beautifully on the web using the<br /> SmartBusiness Template. Its a professional solution<br /> for any small business.
-				</div>
-				<div class="caption slide_button sfb" data-x="40" data-y="329" data-speed="1000" data-start="2000" data-easing="easeOutQuad">
-					<a href="http://themeforest.net/user/atix" class="btn">read more</a>
-				</div>
-				<div class="caption lfr" data-x="390" data-y="90" data-speed="300" data-start="300" data-easing="easeOutQuad">
-					<iframe src='http://player.vimeo.com/video/48985640?title=0&amp;byline=0&amp;portrait=0' width='550' height='309'></iframe>
-				</div>
-			</li>							
 		</ul>
 		<!--div class="tp-bannertimer"></div-->
 	</div>
