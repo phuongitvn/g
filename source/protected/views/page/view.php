@@ -1,6 +1,6 @@
 <div class="tabs-vertical">
 <?php if($childPages):?>
-<div style="overflow: hidden;float: left;height: 100%;border-right:1px solid #e4e4e4;">
+<div style="overflow: hidden;float: left;height: 100%;">
 <ul class="tabset">
 <?php foreach ($childPages as $key => $item):
 	$link = Yii::app()->controller->createUrlPage($item->id);
@@ -11,7 +11,7 @@
 </ul>
 </div>
 <?php endif;?>
-<div class="page_content" style="width: 720px;float: left;">
+<div class="page_content" style="width: 710px;float: left;border-left:1px solid #e4e4e4;padding-left: 10px">
 <h3><?php echo $page->title?></h3>
 <?php echo $page->fulltext;?>
 </div>
