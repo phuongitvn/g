@@ -11,9 +11,6 @@
 				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutExpo">
 					Giải pháp tin cậy, <br />hỗ trợ dài lâu!
 				</div>
-				<div class="caption slide_subtitle sfb" data-x="40" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutExpo">
-					propositions for everybody!
-				</div>
 				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutExpo">
 					Đề cao tinh thần trách nhiệm, <br />chúng tôi luôn mang giải pháp thực đến Quý khách hàng
 				</div>
@@ -28,11 +25,7 @@
 				<!-- THE CAPTIONS IN THIS SLDIE -->
 				<div class="caption lfl" data-x="0" data-y="2" data-speed="1000" data-start="750" data-easing="easeOutQuad"><img src="<?php echo $themeUrl; ?>/images/slider-revolution-2.png" alt="Image 2" /></div>
 				<div class="caption slide_title sfb" data-x="564" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
-					Luôn mang đến sự phù hợp! <br />
-					Giải pháp linh hoạt để ứng dụng phù hợp hơn!
-				</div>
-				<div class="caption slide_subtitle sfb" data-x="564" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutQuad">
-					Quản trị theo mục tiêu, hiệu quả từng tác vụ!
+					Quản trị theo mục tiêu,<br /> hiệu quả từng tác vụ!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="564" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
 					Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất
@@ -48,13 +41,11 @@
 				<!-- THE CAPTIONS IN THIS SLDIE -->
 				<div class="caption lfr" data-x="440" data-y="2" data-speed="800" data-start="1000" data-easing="easeOutQuad"><img src="<?php echo $themeUrl; ?>/images/slider-revolution-3.png" alt="Image 3" /></div>
 				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
-					A driving force <br />for business!
-				</div>
-				<div class="caption slide_subtitle sfb" data-x="40" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutQuad">
-					Quản trị theo mục tiêu, hiệu quả từng tác vụ!
+					Luôn mang đến sự phù hợp!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
-					Thực hiện mục tiêu quản trị bằng phần mềm <br />trên nền tảng xử lý hiệu quả từng<br />tác vụ chi tiết của nhân viên
+					Giải pháp linh hoạt để ứng dụng phù hợp hơn.<br />
+Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất
 				</div>
 				<div class="caption slide_button sfb" data-x="40" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutQuad">
 					<a href="#" class="btn">Xem thêm</a>
