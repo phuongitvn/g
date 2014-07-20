@@ -60,7 +60,7 @@
 	jQuery(document).ready(function() {
 		 api =  jQuery('.fullwidthabnner').revolution(
 						{
-							delay:9000,
+							delay:5000,
 							startwidth:980,
 							startheight:491,
 
