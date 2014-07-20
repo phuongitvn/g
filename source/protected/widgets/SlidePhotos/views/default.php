@@ -11,7 +11,7 @@
 				<div class="caption slide_title sfb" data-x="40" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutExpo">
 					Giải pháp tin cậy, <br />hỗ trợ dài lâu!
 				</div>
-				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutExpo">
+				<div class="caption slide_paragraph sfb" data-x="40" data-y="224" data-speed="700" data-start="1700" data-easing="easeOutExpo">
 					Đề cao tinh thần trách nhiệm, <br />chúng tôi luôn mang giải pháp thực đến Quý khách hàng
 				</div>
 				<div class="caption slide_button sfb" data-x="40" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutExpo">
@@ -27,7 +27,7 @@
 				<div class="caption slide_title sfb" data-x="564" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
 					Luôn mang đến<br />sự phù hợp!
 				</div>
-				<div class="caption slide_paragraph sfb" data-x="564" data-y="200" data-speed="700" data-start="1700" data-easing="easeOutQuad">
+				<div class="caption slide_paragraph sfb" data-x="564" data-y="220" data-speed="700" data-start="1700" data-easing="easeOutQuad">
 					Giải pháp linh hoạt để ứng dụng phù hợp hơn.<br />
 					Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất
 				</div>
