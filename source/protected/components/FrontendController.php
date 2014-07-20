@@ -144,15 +144,18 @@ class FrontendController extends CController
 		
 		//get param for create url
 		$page = FrontendPagesModel::model()->published()->findByPk($pageId);
-		$language = Yii::app()->language;
-		$field = ($language==Yii::app()->params['language_default'])?"alias":"alias_".$language;
-		$params['url_key_page'] = $page->alias;
-		if(Yii::app()->params['multilang'] && !isset($params['lang'])){
-			if(isset($_GET['lang']) && $_GET['lang']!='' && $_GET['lang']!=Yii::app()->params['language_default']){
-				$params['lang']=$_GET['lang'];
+		if($page){
+			$language = Yii::app()->language;
+			$field = ($language==Yii::app()->params['language_default'])?"alias":"alias_".$language;
+			$params['url_key_page'] = $page->alias;
+			if(Yii::app()->params['multilang'] && !isset($params['lang'])){
+				if(isset($_GET['lang']) && $_GET['lang']!='' && $_GET['lang']!=Yii::app()->params['language_default']){
+					$params['lang']=$_GET['lang'];
+				}
 			}
+			return Yii::app()->createUrl(trim($route,'/'),$params,$ampersand);
 		}
-		return Yii::app()->createUrl(trim($route,'/'),$params,$ampersand);
+		return '';
 	}
 	public function createUrlProductDetail($productId, $route='/product/detail', $params=array(), $ampersand='&')
 	{
