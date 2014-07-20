@@ -15,11 +15,10 @@
 					propositions for everybody!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutExpo">
-					Showcase your projects, jobs, employees and company<br />beautifully on the web using the SmartBusiness Theme. 
-					Its <br />a versatile and professional solution for any small business.
+					Đề cao tinh thần trách nhiệm, <br />chúng tôi luôn mang giải pháp thực đến Quý khách hàng
 				</div>
 				<div class="caption slide_button sfb" data-x="40" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutExpo">
-					<a href="http://themeforest.net/user/atix" class="btn">read more</a>
+					<a href="#" class="btn">Xem thêm</a>
 				</div>
 			</li>
 			<!-- THE SECOND SLIDE -->
@@ -36,11 +35,10 @@
 					Quản trị theo mục tiêu, hiệu quả từng tác vụ!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="564" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
-					We are proud to deliver immediate results through<br /> active skills, and real-world tasks that are instantly <br />relevant
-					to everyday business life development.
+					Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất
 				</div>
 				<div class="caption slide_button sfb" data-x="564" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutQuad">
-					<a href="http://themeforest.net/user/atix" class="btn">try it free for 14 days</a>
+					<a href="#" class="btn">Xem thêm</a>
 				</div>
 			</li>
 			<!-- THE THIRD SLIDE -->
@@ -53,14 +51,13 @@
 					A driving force <br />for business!
 				</div>
 				<div class="caption slide_subtitle sfb" data-x="40" data-y="219" data-speed="900" data-start="1500" data-easing="easeOutQuad">
-					the world can be yours!
+					Quản trị theo mục tiêu, hiệu quả từng tác vụ!
 				</div>
 				<div class="caption slide_paragraph sfb" data-x="40" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
-					Showcase your projects, jobs, employees and company<br />beautifully on the web using the SmartBusiness Theme. Its <br />
-					a versatile and professional solution for any small business.
+					Thực hiện mục tiêu quản trị bằng phần mềm <br />trên nền tảng xử lý hiệu quả từng<br />tác vụ chi tiết của nhân viên
 				</div>
 				<div class="caption slide_button sfb" data-x="40" data-y="339" data-speed="1000" data-start="2000" data-easing="easeOutQuad">
-					<a href="http://themeforest.net/user/atix" class="btn">continue reading</a>
+					<a href="#" class="btn">Xem thêm</a>
 				</div>
 			</li>
 		</ul>
