@@ -993,7 +993,7 @@ a:hover .icon.ico6{background:url(../images/ico6-hover.png) no-repeat;}
 	height:1%;
 	margin:0 0 23px;
 	overflow:hidden;
-	padding:14px 20px;
+	padding:5px 20px;
 	background:#fff;
 	border-bottom: 1px solid #ecedf3;
 	-moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
@@ -1720,7 +1720,7 @@ border: 1px solid #FF6041;
 .tabs-vertical .tabset li{
 	background: transparent url(../images/arrow3.png) no-repeat 0 10px;
 	padding: 5px 0 5px 15px;
-	border-bottom:1px dotted #e4e4e4;
+	border-bottom:1px dashed #FF6041;
 }
 .tabs-vertical .tabset a:hover {color:#222;}
 .tabs-vertical .tabset .active a,

@@ -6,7 +6,7 @@ $themeUrl = Yii::app()->theme->baseUrl;
 	<div class="page-title">
 		<!-- breadcrumbs -->
 		<ul class="breadcrumbs">
-			<li><a href="<?php echo Yii::app()->createUrl('/site');?>">Trang chủ</a></li>
+			<li><a href="<?php echo Yii::app()->createUrl('/site/index');?>">Trang chủ</a></li>
 			<li>/</li>
 			<li><?php echo $this->pageTitle;?></li>
 		</ul>
