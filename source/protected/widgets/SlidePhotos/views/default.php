@@ -27,7 +27,7 @@
 				<div class="caption slide_title sfb" data-x="564" data-y="107" data-speed="1100" data-start="1300" data-easing="easeOutQuad">
 					Luôn mang đến<br />sự phù hợp!
 				</div>
-				<div class="caption slide_paragraph sfb" data-x="564" data-y="264" data-speed="700" data-start="1700" data-easing="easeOutQuad">
+				<div class="caption slide_paragraph sfb" data-x="564" data-y="200" data-speed="700" data-start="1700" data-easing="easeOutQuad">
 					Giải pháp linh hoạt để ứng dụng phù hợp hơn.<br />
 					Chúng tôi chú trọng sự phù hợp của giải pháp cho doanh nghiệp hơn là sự tốt nhất
 				</div>
