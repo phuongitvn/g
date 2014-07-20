@@ -30,3 +30,6 @@ ul.photos li,
 ul.links, .blog-links ul, .tweets ul{
 	padding: 0;
 }
+.page_content img{
+	max-width: 720px;
+}

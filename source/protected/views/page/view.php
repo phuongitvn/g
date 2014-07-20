@@ -11,6 +11,8 @@
 </ul>
 </div>
 <?php endif;?>
+<div class="page_content" style="width: 720px;float: left;">
 <h3><?php echo $page->title?></h3>
-<div class="page_content"><?php echo $page->fulltext;?></div>
+<?php echo $page->fulltext;?>
+</div>
 </div>
