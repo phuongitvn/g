@@ -1728,6 +1728,11 @@ border: 1px solid #FF6041;
 	color:#222;
 	font-size: 13px;
 }
+.tabs-vertical .tabset .active a,
+.tabs-vertical .tabset a:hover{
+	color: #FF6041;
+	font-weight: bold;
+}
 .tabs-vertical .tabset .ico1 {background:url(../images/icos-1.png) no-repeat;}
 .tabs-vertical .tabset .ico2 {background:url(../images/icos-2.png) no-repeat;}
 .tabs-vertical .tabset .ico3 {background:url(../images/icos-3.png) no-repeat;}
