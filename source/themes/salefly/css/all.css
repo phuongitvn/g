@@ -116,7 +116,7 @@ h6 {
 }
 .inner #wrapper {
 	margin:0 auto;
-	background:#fbfbfb;
+	background:#fff;
 }
 .w1 {
 	width:100%;
@@ -1710,7 +1710,7 @@ border: 1px solid #FF6041;
 }
 .tabs-vertical .tabset {
 	float:left;
-	width:219px;
+	width:205px;
 	min-height:275px;
 	border-right:1px solid #e4e4e4;
 	padding:7px 10px 0 0;
