@@ -12,7 +12,7 @@
 </div>
 <?php endif;?>
 <div class="page_content" style="width: 710px;float: left;border-left:1px solid #e4e4e4;padding-left: 10px">
-<h3><?php echo $page->title?></h3>
+<!--<h3><?php echo $page->title?></h3>-->
 <?php echo $page->fulltext;?>
 </div>
 </div>
