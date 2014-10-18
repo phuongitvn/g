@@ -12,6 +12,8 @@ body{
 #wrr-body{
 	padding-top: 100px;
 }
+#logo{
+}
 .login-box{
 	border: 1px solid #D3D3D3;
 	width: 300px;
@@ -28,6 +30,9 @@ body{
 }
 .login-box label{
 	display: block;
+}
+.login-box form label{
+	margin: 5px 0;
 }
 .login-box input[type="text"],
 .login-box input[type="password"]{
