@@ -15,6 +15,7 @@
 </head>
 <body>
 <div id="wrr-body">
+<center style="margin-bottom: 20px"><img width="150" class="logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_g.png" /></center>
 <?php echo $content; ?>
 </div>
 </body>
