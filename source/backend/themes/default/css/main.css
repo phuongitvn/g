@@ -218,10 +218,12 @@ body>#body-container{
 	height: 100px;
 }
 .page-title{
-	font-size: 16px;
+	padding: 0px;
+	font-size: 20px;
+	letter-spacing: -1px;
+	display: block;
+	color: #666;
 	margin: 0;
-	font-weight: bold;
-	color: #428BCA;
 }
 .search-form{
 	overflow: hidden;
