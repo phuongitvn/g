@@ -63,7 +63,7 @@ ul.menutypes li a:hover{
 		<?php echo $form->labelEx($model,'Parent'); ?>
 		<?php
 		$meid = ($model->id>0)?$model->id:0;
-		$items_list = BackendMenuItemsModel::model()->findAll("menu_group =:g AND published=1 ORDER BY position ASC", array(':g'=>$model->menu_group));
+		$items_list = BackendMenuItemsModel::model()->findAll("published=1 ORDER BY position ASC");
 		$items = CHtml::listData($items_list, 'id', 'title_tree');
 		echo '<select name="BackendMenuItemsModel[parent_id]" id="BackendMenuItemsModel_parent_id">';
 		echo '<option value="">--None--</option>';

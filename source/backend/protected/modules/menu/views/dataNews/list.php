@@ -1,5 +1,5 @@
 <?php
-$this->widget('webroot.widgets.iGridView', array(
+$this->widget('application.widgets.iGridView', array(
 	'id' => 'news-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,

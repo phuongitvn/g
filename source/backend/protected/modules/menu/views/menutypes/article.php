@@ -6,7 +6,7 @@ if(isset($data->content_id) && !empty($data->content_id))
 <label><?php echo Yii::t('main','Select article')?></label>
 <input style="float: left;width: 335px" type="text" readonly="readonly" disabled="disabled" id="slnews_title" value="<?php if(isset($title)) echo $title;?>" />
 <input type="hidden" name="BackendMenuItemsModel[content_id]" id="slnews_id" value="<?php if(isset($data->content_id)) echo $data->content_id;?>" />
-<a style="float: left;margin: 5px 10px;" id="newDialog" rel="tooltip" class="btn" href="#"><i class="icon-plus-sign"></i></a>
+<a style="float: left;margin: 5px 10px;" id="newDialog" rel="tooltip" class="btn btn-primary btn-sm" href="#"><i class="glyphicon glyphicon-record"></i></a>
 <div id="dialog-news"></div>
 <script type="text/javascript">
     $("#newDialog").click(function ()    {
