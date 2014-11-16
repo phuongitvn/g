@@ -16,12 +16,12 @@
 		
 		<div class="row">
 		<?php echo $form->labelEx($model,'title'); ?>
-		<?php echo $form->textField($model, 'title', array('maxlength' => 255, 'style'=>'width:400px;','onBlur'=>'CoreJs.buildAlias(this.value, \'-\',\'BackendCategoriesModel_alias\');')); ?>
+		<?php echo $form->textField($model, 'title', array('maxlength' => 255, 'style'=>'width:400px;', 'class'=>'txtchange')); ?>
 		<?php echo $form->error($model,'title'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'alias'); ?>
-		<?php echo $form->textField($model, 'alias', array('maxlength' => 255, 'style'=>'width:400px;')); ?>
+		<?php echo $form->textField($model, 'alias', array('maxlength' => 255, 'style'=>'width:400px;', 'class'=>'txtrcv')); ?>
 		<?php echo $form->error($model,'alias'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -49,22 +49,7 @@
 		?>
 		<?php echo $form->error($model,'parent_id'); ?>
 		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'language'); ?>
-		<?php 
-			$langs = Yii::app()->params['languages'];
-			echo $form->dropDownList($model,'language', $langs);
-		?>
-		<?php echo $form->error($model,'language'); ?>
-		</div><!-- row -->
 		<?php if(Yii::app()->params['multilang']):?>
-		<div class="row">
-		<?php echo $form->labelEx($model,'translate_key'); ?>
-		<?php 
-			echo $form->textField($model,'translate_key', array('type'=>'hidden'));
-		?>
-		<?php echo $form->error($model,'translate_key'); ?>
-		</div><!-- row -->
 		<?php endif;?>
 		<div class="row">
 		<?php echo $form->labelEx($model,'description'); ?>

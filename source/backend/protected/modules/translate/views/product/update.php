@@ -30,7 +30,7 @@ $trans_elements = is_array($trans_elements)?$trans_elements:false;
 <div style="float:left;width: 98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data['description'];?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description',
@@ -54,7 +54,7 @@ $trans_elements = is_array($trans_elements)?$trans_elements:false;
 <div style="float:left;width: 98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data['description_full'];?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description Full').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description Full').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description_full',
@@ -78,7 +78,7 @@ $trans_elements = is_array($trans_elements)?$trans_elements:false;
 <div style="float:left;width: 98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data['description_more'];?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description More').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description More').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description_more',

@@ -56,7 +56,7 @@ class ManageController extends BackendApplicationController {
 
 	public function actionDelete($id) {
 		if (Yii::app()->request->isPostRequest) {
-			$this->loadModel($id, 'Comment')->delete();
+			$this->loadModel($id, 'BackendCommentModel')->delete();
 
 			if (!Yii::app()->request->isAjaxRequest)
 				$this->redirect(array('admin'));

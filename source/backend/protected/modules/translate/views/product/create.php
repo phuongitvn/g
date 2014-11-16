@@ -24,11 +24,11 @@ $languages = Yii::app()->params['languages'];
 
 <!-- Description -->
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Fulltext');?></label>
+<label ><?php echo Yii::t('app','Fulltext');?></label>
 <div style="clear:both;width:98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data->description;?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description',
@@ -48,11 +48,11 @@ $languages = Yii::app()->params['languages'];
 </div>
 <!-- Long Description -->
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Full Description');?></label>
+<label ><?php echo Yii::t('app','Full Description');?></label>
 <div style="clear:both;width:98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data->description_full;?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description Full').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description Full').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description_full',
@@ -72,11 +72,11 @@ $languages = Yii::app()->params['languages'];
 </div>
 <!-- More Description -->
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description More');?></label>
+<label ><?php echo Yii::t('app','Description More');?></label>
 <div style="clear:both;width:98%;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data->description_more;?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Description More').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label ><?php echo Yii::t('app','Description More').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_description_more',

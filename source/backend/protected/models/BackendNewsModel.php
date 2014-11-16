@@ -7,6 +7,11 @@ class BackendNewsModel extends ContentModel
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
 	}
+	public function rules() {
+		return CMap::mergeArray(parent::rules(),array(
+				array('alias', 'required'),
+		));
+	}
 	/**
 	 * @return array relational rules.
 	 */

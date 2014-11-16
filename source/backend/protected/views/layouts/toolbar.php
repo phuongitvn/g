@@ -1,23 +1,34 @@
+<?php $action = Yii::app()->controller->action->id;?>
 <div class="toolbar-action">
 	<div class="ta-inner div-table">
 		<div class="div-row">
 			<div class="div-column-l" style="vertical-align: middle">
-			<h3 class="page-title"><?php echo Yii::app()->controller->pageTitle;?></h3></div>
+			<h3 class="page-title">
+			<?php echo Yii::app()->controller->pageTitle;
+				if($action=='update'){
+					echo ' | '.Yii::t('main','Update');
+				}elseif($action=='create'){
+					echo ' | '.Yii::t('main','Create New');
+				}elseif($action=='view'){
+					echo ' | '.Yii::t('main','View Info');
+				}
+			?>
+			</h3></div>
 			<div class="div-column-r">
 				<?php if(empty($this->btnOptions)):?>
 					<?php 
 					$action = Yii::app()->controller->action->id;
 					?>
 					<?php if($action=='admin'):?>
-					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('create')?>">Create New</a>
-					<a class="btn btn-primary btn-sm search-button" href="<?php echo $this->createUrl('create')?>">Search</a>
+					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('create')?>"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Create New')?></a>
+					<a class="btn btn-primary btn-sm search-button" href="<?php echo $this->createUrl('create')?>"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Search')?></a>
 					<?php elseif(in_array($action, array('create','update'))):?>
-					<a class="btn btn-primary btn-sm submit" href="#">Save</a>
-					<a class="btn btn-primary btn-sm apply" href="#">Save & Continue</a>
-					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('admin')?>">Close</a>
+					<a class="btn btn-primary btn-sm submit" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Save')?></a>
+					<a class="btn btn-primary btn-sm apply" href="#"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Save & Continue')?></a>
+					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('admin')?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Close')?></a>
 					<?php elseif(in_array($action, array('view'))):?>
-					<a class="btn btn-primary btn-sm submit" href="<?php echo $this->createUrl('update', array('id'=>$_GET['id']))?>">Update</a>
-					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('admin')?>">Close</a>
+					<a class="btn btn-primary btn-sm submit" href="<?php echo $this->createUrl('update', array('id'=>$_GET['id']))?>"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Update')?></a>
+					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('admin')?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Close')?></a>
 					<?php endif;?>
 				<?php else:?>
 					<?php echo $this->btnOptions; ?>

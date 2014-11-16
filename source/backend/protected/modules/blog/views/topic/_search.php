@@ -6,28 +6,8 @@
 )); ?>
 
 	<div class="row">
-		<?php echo $form->label($model, 'id'); ?>
-		<?php echo $form->textField($model, 'id'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model, 'name'); ?>
 		<?php echo $form->textField($model, 'name', array('maxlength' => 255)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'description'); ?>
-		<?php echo $form->textField($model, 'description', array('maxlength' => 500)); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'created_datetime'); ?>
-		<?php echo $form->textField($model, 'created_datetime'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->label($model, 'updated_datetime'); ?>
-		<?php echo $form->textField($model, 'updated_datetime'); ?>
 	</div>
 
 	<div class="row">

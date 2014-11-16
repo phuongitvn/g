@@ -7,33 +7,24 @@
 ?>
 	<?php echo $form->errorSummary($model); ?>
 	<div class="row">
+	<?php echo $form->labelEx($model,'status'); ?>
+	<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus')); ?>
+	</div>
+	<div class="row">
 	<?php echo $form->labelEx($model,'title'); ?>
-	<?php echo $form->textField($model, 'title', array('maxlength' => 255, 'class'=>'textField-l', 'onBlur'=>'CoreJs.buildAlias(this.value, \'-\',\'BackendPagesModel_alias\');')); ?>
+	<?php echo $form->textField($model, 'title', array('maxlength' => 255, 'class'=>'textField-l', 'class'=>'txtchange', 'style'=>'width: 400px;')); ?>
 	<?php echo $form->error($model,'title'); ?>
 	</div><!-- row -->
 	<div class="row">
 	<?php echo $form->labelEx($model,'alias'); ?>
-	<?php echo $form->textField($model, 'alias', array('class'=>'textField-l')); ?>
+	<?php echo $form->textField($model, 'alias', array('class'=>'textField-l txtrcv', 'style'=>'width: 400px;')); ?>
 	<?php echo $form->error($model,'alias'); ?>
 	</div><!-- row -->
-	<div class="row">
-	<?php echo $form->labelEx($model,'status'); ?>
-	<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus')); ?>
-	</div>
 	<div class="row">
 	<?php echo $form->labelEx($model,'ordering'); ?>
 	<?php echo $form->textField($model, 'ordering'); ?>
 	<?php echo $form->error($model,'ordering'); ?>
 	</div>
-	<!-- 
-	<div class="row">
-		<?php echo $form->labelEx($model,'language'); ?>
-		<?php 
-			$langs = Yii::app()->params['languages'];
-			echo $form->dropDownList($model,'language', $langs);
-		?>
-		<?php echo $form->error($model,'language'); ?>
-	</div>-->
 	<div class="row">
 		<?php echo $form->labelEx($model,'catid'); ?>
 		<?php

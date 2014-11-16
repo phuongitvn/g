@@ -38,8 +38,16 @@ return array(
 	'Create New'=>'Thêm mới',
 	'Search'=>'Tìm kiếm',
 	'Close'=>'Đóng',
-	'Update'=>'Sửa',
+	'Update'=>'Cập nhật',
 	'Save'=>'Lưu',
 	'Save & Continue'=>'Lưu & Tiếp tục',
-	'List'=>'Danh sách'
+	'List'=>'Danh sách',
+	'Article Info'=>'Thông tin bài viết',
+	'Images'=>'Ảnh',
+	'Files Attach'=>'Đính kèm file',
+	'Create Article'=>'Thêm mới bài viết',
+	'View Info'=>'Thông tin chi tiết',
+	'Topics Manager'=>'Quản lý topic',
+	'Comment Manager'=>'Quản lý bình luận',
+	'Languages Translate'=>'Dịch ngôn ngữ'
 );

@@ -8,7 +8,7 @@ array(
 	'defaultController'=>'dashboard',
 	// preloading 'log' component
 	'preload'=>array('log'),
-	'language'=>'en',
+	'language'=>'vi',
 	// autoloading model and component classes
 	'import'=>array(
 		'application.models.*',

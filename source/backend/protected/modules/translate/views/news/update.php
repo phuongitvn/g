@@ -39,7 +39,7 @@ $trans_elements = is_array($trans_elements)?$trans_elements:false;
 <div style="float:left;background: #EBEBE4;padding: 10px;border: 1px solid #999;"><?php echo $data['introtext'];?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Introtext').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label><?php echo Yii::t('app','Introtext').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_introtext',
@@ -64,7 +64,7 @@ $trans_elements = is_array($trans_elements)?$trans_elements:false;
 <div style="float:left;background: #EBEBE4;padding: 10px;border: 1px solid #999;overflow: hidden"><?php echo $data['fulltext'];?></div>
 </div>
 <div class="row">
-<label style="width: 150px;"><?php echo Yii::t('app','Fulltext').'&nbsp('.$languages[$params_filter['language']].')';?></label>
+<label><?php echo Yii::t('app','Fulltext').'&nbsp('.$languages[$params_filter['language']].')';?></label>
 <?php
 		$this->widget('application.extensions.elrte.elRTE', array(
 		    'selector'=>'BackendTranslatesModel_fulltext',

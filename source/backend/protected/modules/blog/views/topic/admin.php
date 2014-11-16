@@ -22,8 +22,15 @@ $('.search-form form').submit(function(){
 <?php $this->widget('application.widgets.iGridView', array(
 	'id' => 'blog-topic-model-grid',
 	'dataProvider' => $model->search(),
-	'filter' => $model,
 	'columns' => array(
+		array(
+				'type'	=>	'raw',
+				'header'	=>'<div id="sl-row" onclick="CoreJs.checkAll(this.id);" status="1"><input type="checkbox" class="checkall" value="" /></div>',
+				'value'	=>	'CHtml::checkBox("rad_ID[]", "", array("value"=>$data->id))',
+				'htmlOptions'	=>	array(
+						'width'	=>	'50',
+				),
+		),
 		'name',
 		'description',
 		array(

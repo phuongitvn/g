@@ -24,33 +24,25 @@ $form = $this->beginWidget('GxActiveForm', array(
 
 <div id="tabs-news">
 	<ul>
-		<li><a href="#main-news"><?php echo Yii::t('main','Content')?></a></li>
+		<li><a href="#main-news"><?php echo Yii::t('main','Article Info')?></a></li>
 		<li><a href="#images"><?php echo Yii::t('main','Images')?></a></li>
-		<li><a href="#add-files"><?php echo Yii::t('main','Add Files')?></a></li>
+		<li><a href="#add-files"><?php echo Yii::t('main','Files Attach')?></a></li>
 	</ul>
 	<div id="main-news">
 		<?php echo $form->errorSummary($model); ?>
 		<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus')); ?>
+		<?php echo $form->dropDownList($model,'status',BackendLookupModel::items('NewsStatus'), array('style'=>'width: 75px;')); ?>
 		</div>
 		<div class="row">
 		<?php echo $form->labelEx($model,'title'); ?>
-		<?php echo $form->textField($model, 'title', array('maxlength' => 255, 'class'=>'textField-l', 'onBlur'=>'CoreJs.buildAlias(this.value, \'-\',\'BackendNewsModel_alias\');')); ?>
+		<?php echo $form->textField($model, 'title', array('style'=>'width: 400px;','maxlength' => 255, 'class'=>'textField-l txtchange')); ?>
 		<?php echo $form->error($model,'title'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'alias'); ?>
-		<?php echo $form->textField($model, 'alias', array('class'=>'textField-l')); ?>
+		<?php echo $form->textField($model, 'alias', array('style'=>'width: 400px;','class'=>'textField-l txtrcv')); ?>
 		<?php echo $form->error($model,'alias'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'language'); ?>
-		<?php 
-			$langs = Yii::app()->params['languages'];
-			echo $form->dropDownList($model,'language', $langs);
-		?>
-		<?php echo $form->error($model,'language'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'catid'); ?>
@@ -76,7 +68,7 @@ $form = $this->beginWidget('GxActiveForm', array(
 		    'height' => '150',
 		    'width' => '100%',
 		    'fmAllow' => 'true',
-		    'toolbar' => 'normal',
+		    'toolbar' => 'compact',
 		 ));
 		  echo $form->textArea($model, 'introtext');
 		?>
@@ -125,7 +117,7 @@ $form = $this->beginWidget('GxActiveForm', array(
 	</div>
 	<div id="images">
 		<div class="row">
-		<div id="img_tmp"><img src="<?php echo AvatarHelper::getAvatarUrl($model->id, "s1","news")?>" /></div>
+		<div id="img_tmp"><img src="<?php echo ($model->isNewRecord)?Yii::app()->theme->baseUrl."/images/no_image.png":AvatarHelper::getAvatarUrl($model->id, "s1","news")?>" /></div>
 		<?php $this->widget('ext.EAjaxUpload.EAjaxUpload',
 			array(
 			        'id'=>'uploadFile',

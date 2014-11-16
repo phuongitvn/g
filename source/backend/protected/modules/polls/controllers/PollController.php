@@ -5,7 +5,7 @@ class PollController extends BackendApplicationController
 	public $layout = 'application.modules.polls.views.layouts.poll';
 	public function init(){
 		parent::init();
-		$this->pageTitle = Yii::t("main","Poll Manager");
+		$this->pageTitle = Yii::t("main","Polls Manager");
 	}
 	/**
 	* Export the results of a Poll.

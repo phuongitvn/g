@@ -6,7 +6,7 @@ $controller = Yii::app()->controller->getId();
 	<li class="menu-section">
 		<div class="menu-section-item">
 		<ul class="apps-link">
-			<li><a class="yt-valign" href="<?php echo Yii::app()->createUrl('/dashboard');?>"><i class="glyphicon glyphicon-home"></i>&nbsp;Dashboard</a></li>
+			<li><a class="yt-valign" href="<?php echo Yii::app()->createUrl('/dashboard');?>"><i class="glyphicon glyphicon-home"></i>&nbsp;<?php echo Yii::t('main','Dashboard')?></a></li>
 			<li><a class="yt-valign <?php if($module =='news' && $controller=='news') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/news/news/admin');?>"><i class="glyphicon glyphicon-list-alt"></i>&nbsp;<?php echo Yii::t('main','Articles Manager')?></a>
 				<?php if($module =='news' && ($controller=='news' || $controller=='categories') || $module=='files'){?>
 				<ul class="sub-menu">
@@ -33,7 +33,7 @@ $controller = Yii::app()->controller->getId();
 			<li><a class="yt-valign <?php if($module=='settings' && $controller=='default') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings');?>"><i class="glyphicon glyphicon-cog"></i>&nbsp;<?php echo Yii::t('main','Settings')?></a>
 				<?php if($module=='settings'){?>
 				<ul class="sub-menu">
-					<li><a class="yt-valign <?php if($module =='settings' && $controller=='admin') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings/admin/admin');?>">System</a></li>
+					<li><a class="yt-valign <?php if($module =='settings' && $controller=='admin') echo 'actived';?>" href="<?php echo Yii::app()->createUrl('/settings/admin/admin');?>"><?php echo Yii::t('main','System')?></a></li>
 				</ul>
 				<?php }?>
 			</li>
