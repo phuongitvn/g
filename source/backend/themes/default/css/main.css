@@ -201,14 +201,19 @@ body>#body-container{
 	display: block;
 	margin-top: 5px;
 	margin-bottom: 0;
+	float: left;
+	width: 100px;
+	text-align: right;
+	margin-right: 10px;
 }
 .form input[type="text"],
 .form textarea,
 .form select{
-	min-width: 400px;
+	width: 200px;
 	padding: 5px;
 	border: 1px solid #D3D3D3;
 }
+
 .form input[type="text"]:hover,
 .form textarea:hover,
 .form select:hover{
