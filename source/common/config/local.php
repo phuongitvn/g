@@ -1,4 +1,6 @@
 <?php
+define('SITE_URL', 'http://localhost:8989');
+define('SITE_PATH', dirname(dirname(dirname(__FILE__))));
 Yii::setPathOfAlias('root', dirname(dirname(dirname(__FILE__))));
 Yii::setPathOfAlias('common', dirname(dirname(dirname(__FILE__))) . DS . 'common');
 Yii::setPathOfAlias('frontend', dirname(dirname(dirname(__FILE__))) . DS . 'protected');
@@ -19,7 +21,7 @@ return
 			'connectionString' => 'mysql:host=localhost;dbname=ahpproject',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset' => 'utf8',
 			'tablePrefix' => 'tbl_',
 		),
