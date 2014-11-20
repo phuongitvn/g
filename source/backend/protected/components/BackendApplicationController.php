@@ -25,20 +25,6 @@ class BackendApplicationController extends Controller
 	
 	public $btnOptions = null;
 	public function init(){
-		/* $cs=Yii::app()->clientScript;
-		$cs->scriptMap=array(
-				'jquery.min.js'=>false,
-		);
-		 */
-		//Yii::app()->getClientScript()->registerScriptFile(Yii::app()->theme->baseUrl.'/js/jquery-1.6.1.min.js');
-		Yii::app()->getClientScript()->registerCoreScript('jquery');
-		$dir = Yii::getPathOfAlias('common').DS.'libs/bootstrap';
-		$assets = Yii::app()->assetManager->publish($dir, false, -1, YII_DEBUG);
-		$cs = Yii::app()->getClientScript();
-		$cs->registerCssFile("{$assets}/css/bootstrap.min.css");
-		$cs->registerScriptFile("{$assets}/js/bootstrap.min.js");
-		$cs->registerScriptFile(Yii::app()->theme->baseUrl."/js/core.js");
-		//Yii::app()->clientScript->registerScriptFile($this->getAssetsUrl().'/core.js', CClientScript::POS_HEAD);
 		parent::init();
 	}
 	/**

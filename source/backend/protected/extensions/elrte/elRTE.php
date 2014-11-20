@@ -29,12 +29,12 @@ class elRTE extends CInputWidget
         //$ClientScript->registerCoreScript('jquery');               
         //$ClientScript->registerScriptFile("{$this->baseUrl}/js/jquery-1.6.1.min.js");
         $ClientScript->registerScriptFile("{$this->baseUrl}/js/jquery-ui-183.min.js");
-        $ClientScript->registerScriptFile("{$this->baseUrl}/js/elrte.full.js");             
+        $ClientScript->registerScriptFile("{$this->baseUrl}/js/elrte.min.js");             
         $ClientScript->registerCssFile("{$this->baseUrl}/css/smoothness/jquery-ui-1.8.13.custom.css");
         $ClientScript->registerCssFile("{$this->baseUrl}/css/elrte.min.css");
         $ClientScript->registerCssFile("{$this->baseUrl}/css/elrte-inner.css");       
         $ClientScript->registerCssFile("{$this->baseUrl}/css/elfinder.css");          
-        $ClientScript->registerScriptFile("{$this->baseUrl}/js/elfinder.full.js");
+        $ClientScript->registerScriptFile("{$this->baseUrl}/js/elfinder.min.js");
 
         if ( isset($this->lang) && $this->lang != 'en')
         {

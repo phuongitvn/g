@@ -6,11 +6,20 @@
 	<meta name="language" content="en" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<!--[if lt IE 8]>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/ie.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
 	<![endif]-->
-	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/images/favicon.ico" >	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/screen.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/main.css" />
+	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/system/images/favicon.ico" >	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/main.css" />
+	<?php 
+	$cs = Yii::app()->getClientScript();
+	$cs->registerCoreScript('jquery');
+	$cs->registerScriptFile(Yii::app()->request->baseUrl.'/system/js/core.js');
+	$dir = Yii::getPathOfAlias('common').DS.'libs/bootstrap';
+	$assets = Yii::app()->assetManager->publish($dir, false, -1, YII_DEBUG);
+	$cs->registerScriptFile($assets.'/js/bootstrap.min.js');
+	$cs->registerCssFile($assets.'/css/bootstrap.min.css');
+	?>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body class="panel-enabled">
