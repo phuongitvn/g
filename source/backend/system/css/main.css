@@ -252,6 +252,10 @@ body>#body-container{
 	box-shadow: 3px 3px 3px #AAA!important;
 	border-radius: 0!important;
 	background-clip: border-box!important;
+	border: 0!important;
+}
+.dropdown-menu>li>a{
+	font-size: 13px!important;
 }
 .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{
 	background: #428BCA!important;

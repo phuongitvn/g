@@ -22,7 +22,7 @@
 					<?php if($action=='admin'):?>
 					<a class="btn btn-primary btn-sm" href="<?php echo $this->createUrl('create')?>"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Create New')?></a>
 					<a class="btn btn-primary btn-sm search-button" href="<?php echo $this->createUrl('create')?>"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Search')?></a>
-					<a class="btn btn-primary btn-sm search-button" href="<?php echo $this->createUrl('create')?>"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Delete')?></a>
+					<a class="btn btn-danger btn-sm" href="javascript: void(0);" onclick="return CoreJs.deleteAll('<?php echo $this->createUrl('delMulti')?>');"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Delete')?></a>
 					<?php elseif(in_array($action, array('create','update'))):?>
 					<a class="btn btn-primary btn-sm submit" href="#"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Save')?></a>
 					<a class="btn btn-primary btn-sm apply" href="#"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>&nbsp;<?php echo Yii::t('main','Save & Continue')?></a>

@@ -30,7 +30,7 @@ var CoreJs = {
 			}
 		},
 		
-		deleteAll: function(url, msg){
+		deleteAll: function(url){
 			var data = new Array()
 			i=0
 			$("input[name='rad_ID[]']").each(function(){
@@ -40,7 +40,7 @@ var CoreJs = {
 				
 			})
 			if(data.join(':')!=''){
-				if(confirm(msg)){
+				if(confirm('Are you sure you want to delete this item?')){
 					jQuery.ajax({
 						url: url,
 						data: {data:data.join(':')},
@@ -54,20 +54,7 @@ var CoreJs = {
 			}else{
 				alert("You must choice a record to remove.")
 			}
-		},
-		buildAlias: function(str,delimiter,result){
-			jQuery.ajax({
-				url: 'index.php?r=allowed/buildAlias',
-				data: {
-					title:str,
-					delimiter:delimiter
-				},
-				dataType:'json',
-				type: 'post',
-				success: function(data){
-					jQuery("#"+result).attr('value',data.result);
-				  }
-			})
+			return false;
 		},
 }
 var createnicename = function(el){
