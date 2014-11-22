@@ -28,11 +28,11 @@ $this->pageTitle=Yii::app()->name . ' - '.UserModule::t("Login");
 		<?php echo CHtml::activePasswordField($model,'password') ?>
 	</div>
 	<div class="row rememberMe">
-		<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-		<?php echo CHtml::activeLabelEx($model,'rememberMe', array('class'=>'inline-block')); ?>
+		<label><?php echo CHtml::activeCheckBox($model,'rememberMe'); ?></label>
+		<span><?php echo Yii::t("main","Remember me next time");?></span>
 	</div>
-	<div class="row submit">
-		<?php echo CHtml::submitButton(Yii::t("main","Login"), array('class'=>'add-btn button p0')); ?>
+	<div class="row submit" style='text-align: center'>
+		<?php echo CHtml::submitButton(Yii::t("main","Login"), array('class'=>'button button-red')); ?>
 	</div>
 <?php echo CHtml::endForm(); ?>
 </div><!-- form -->

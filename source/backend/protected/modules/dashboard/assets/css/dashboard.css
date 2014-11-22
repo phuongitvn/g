@@ -12,17 +12,13 @@
 	}
 .dashboard-portlet-header { 
 	background: #FAFAFA!important;
-	background: -moz-linear-gradient(#FAFAFA, #E0E0E0)!important;
-	background: -webkit-linear-gradient(#FAFAFA, #E0E0E0)!important;
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#e0e0e0')"!important;
 	margin: 0;
 	border-top-left-radius: 1px!important;
 	border-top-right-radius: 1px!important;
 	border: 1px solid #D8D8D8;
 	border-bottom: none;
-	padding: 10px 10px 11px 10px;
+	padding: 8px 10px 9px 10px;
 	font-size: 14px;
-	text-shadow: 0 1px 0 white;
 	line-height: 1.4;
 }
 .dashboard-portlet-header .ui-icon { float: right; cursor: default; }

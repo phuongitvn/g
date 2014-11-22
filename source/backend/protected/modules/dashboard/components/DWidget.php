@@ -21,7 +21,7 @@ class DWidget extends CJuiWidget
     parent::init();
 
     $cs=Yii::app()->getClientScript();
-    $scriptUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.dashboard.assets'));
+    $scriptUrl = Yii::app()->getAssetManager()->publish(Yii::getPathOfAlias('application.modules.dashboard.assets'),false,-1,YII_DEBUG);
     
     $cs->registerCssFile($scriptUrl . '/jgrowl/jquery.jgrowl.css');
     $cs->registerScriptFile($scriptUrl . '/jgrowl/jquery.jgrowl.js');
