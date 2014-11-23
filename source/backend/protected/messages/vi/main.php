@@ -51,5 +51,6 @@ return array(
 	'Comment Manager'=>'Quản lý bình luận',
 	'Languages Translate'=>'Dịch ngôn ngữ',
 	'Site Name'=>'Tên website',
-	'Frontend Language'=>'Ngôn ngữ mặc định'
+	'Frontend Language'=>'Ngôn ngữ mặc định',
+	'General Setting'=>'Thiết lập chung'
 );
