@@ -32,7 +32,7 @@ class SiteController extends BackendApplicationController
 		Yii::import("ext.EAjaxUpload.qqFileUploader");
 	
 		$folder=Yii::app()->params['tmp_upload'];// folder for uploaded files
-		$allowedExtensions = array("jpg");//array("jpg","jpeg","gif","exe","mov" and etc...
+		$allowedExtensions = array("jpg","png");//array("jpg","jpeg","gif","exe","mov" and etc...
 		$sizeLimit = 10 * 1024 * 1024;// maximum file size in bytes
 		$uploader = new qqFileUploader($allowedExtensions, $sizeLimit);
 		$result = $uploader->handleUpload($folder);

@@ -20,6 +20,8 @@ class baseGridView extends CGridView
 	public $cssFile = false;
 
 	public $classStyle = 'responsive-table-toggle';
+	
+	public $pager=array('class'=>'application.widgets._base.baseLinkPager');
 	/**
 	 * Initializes the widget.
 	 */
