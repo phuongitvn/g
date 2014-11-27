@@ -10,8 +10,9 @@ class AvatarHelper {
 		$pathDir = Yii::app()->params[$type.'_path'];
 		foreach ($alowSize as $folder => $size) {
 			// Create folder by ID
-			$fileSystem->mkdirs(self::getAvatarPath($id, $folder, true, $pathDir));
-			@chmod(self::getAvatarPath($id, $folder, true, $pathDir), 0777);
+			$avatarPath = self::getAvatarPath($id, $folder, true, $pathDir);
+			$fileSystem->mkdirs($avatarPath);
+			@chmod($avatarPath, 0777);
 
 			// Get link file by ID
 			$savePath[$folder] = self::getAvatarPath($id, $folder, false, $pathDir);
@@ -116,7 +117,7 @@ class AvatarHelper {
 	{
 		$pathUrl = Yii::app()->params[$type."_url"];
 		if(!isset($id)) $id = 0;
-		return $pathUrl.DS.$size.DS.$id.DS.$id.".jpg?v=".time();
+		return $pathUrl.'/'.$size.'/'.$id.'/'.$id.".jpg?v=".time();
 	}
 	public static  function getSavedName($itemId, $itemPerDir = 1024) {
 		$dir1 = floor($itemId / ($itemPerDir * $itemPerDir * $itemPerDir));
