@@ -2,7 +2,7 @@
 $this->renderPartial('..//filterTranslate/_form');
 ?>
 <?php 
-$this->btnOptions = '<button class="btn btn-danger" onclick="CoreJs.deleteAll(\''.Yii::app()->createUrl('/translate/filterTranslate/delMulti').'\',\''.Yii::t('app','Are you sure you want to delete item?').'\')">'.Yii::t('main','Delete Translate').'</button>';
+$this->btnOptions = '<button class="btn btn-sm btn-danger" onclick="CoreJs.deleteAll(\''.Yii::app()->createUrl('/translate/filterTranslate/delMulti').'\',\''.Yii::t('app','Are you sure you want to delete item?').'\')">'.Yii::t('main','Delete Translate').'</button>';
 ?>
 <?php
 

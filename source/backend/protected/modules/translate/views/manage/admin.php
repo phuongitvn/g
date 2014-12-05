@@ -1,5 +1,5 @@
 <?php 
-$this->btnOptions = "<button type='submit' class='btn btn-primary'>".Yii::t("main","Search")."</button>";
+$this->btnOptions = "<button type='submit' class='btn btn-sm btn-primary'>".Yii::t("main","Search")."</button>";
 ?>
 <?php
 Yii::app()->clientScript->registerScript('search', "
