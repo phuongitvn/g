@@ -74,6 +74,7 @@
 }
 .grid-view table.items tbody tr td a{
 	color: #2793E6;
+	display: block;
 }
 .grid-view table.items tbody tr:hover
 {

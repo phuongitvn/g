@@ -1,20 +1,3 @@
-<?php $this->beginWidget('webroot.widgets.iButtonBar');?>
-
-<?php $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>Yii::t('main','Create Banner'),
-    'type'=>'success', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-    'icon'=>'plus-sign white',
-    'url'=> array('create'),
-	'htmlOptions'=>array('style'=>'width: 145px;')
-));?>
-<?php $this->widget('bootstrap.widgets.TbButton', array(
-    'label'=>Yii::t('main', 'Advanced Search'),
-    'type'=>'primary', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-	'icon'=>'search white',
-    'url'=> '#',
-	'htmlOptions'=>array('class'=>'search-button')
-));?>
-<?php $this->endWidget();?>
 <?php
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -31,13 +14,11 @@ $('.search-form form').submit(function(){
 ?>
 
 <div class="search-form">
-<?php $this->beginWidget('webroot.widgets.iPortlet', array('title'=>Yii::t('main','Advanced Search')));?>
 <?php $this->renderPartial('_search', array(
 	'model' => $model,
 )); ?>
-<?php $this->endWidget();?>
 </div><!-- search-form -->
-<?php $this->widget('webroot.widgets.iGridView', array(
+<?php $this->widget('application.widgets.iGridView', array(
 	'id' => 'ads-grid',
 	'dataProvider' => $model->search(),
 	'columns' => array(

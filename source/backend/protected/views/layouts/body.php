@@ -33,7 +33,7 @@
 						      <span class="caret"></span>
 						    </button>
 						    <ul class="dropdown-menu">
-						      	<li><a target="_blank" href="<?php echo Yii::app()->params['frontend_site_url'];?>"><span class="glyphicon glyphicon-cog"></span> <?php echo Yii::t('main','View Site');?></a></li>
+						      	<li><a target="_blank" href="<?php echo SITE_URL;?>"><span class="glyphicon glyphicon-send"></span> <?php echo Yii::t('main','View Site');?></a></li>
 						      	<li><a href="<?php echo Yii::app()->createUrl('/settings/admin/admin')?>"><span class="glyphicon glyphicon-cog"></span> <?php echo Yii::t('main','Settings');?></a></li>
 						      	<li><a href="<?php echo Yii::app()->createUrl('/user/profile/edit');?>"><span class="glyphicon glyphicon-user"></span> <?php echo Yii::t('main','Profile');?></a></li>
 						      	<?php if(UserComponent::checkAccessUser('srbac@AuthitemManage')):?>

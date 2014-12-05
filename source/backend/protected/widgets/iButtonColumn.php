@@ -18,25 +18,99 @@ class iButtonColumn extends CButtonColumn
 	/**
 	 * @var string the view button icon (defaults to 'eye-open').
 	 */
-	public $viewButtonIcon = 'eye-open blue';
+	//public $viewButtonIcon = 'eye-open blue';
+	public $viewButtonIcon = 'glyphicon glyphicon-search';
 	/**
 	 * @var string the update button icon (defaults to 'pencil').
 	 */
-	public $updateButtonIcon = 'pencil blue';
+	//public $updateButtonIcon = 'pencil blue';
+	public $updateButtonIcon = 'glyphicon glyphicon-pencil';
 	/**
 	 * @var string the delete button icon (defaults to 'trash').
 	 */
-	public $deleteButtonIcon = 'trash blue';
+	//public $deleteButtonIcon = 'trash blue';
+	public $deleteButtonIcon = 'glyphicon glyphicon-remove';
 
 	public $htmlOptions=array('style'=>'width: 50px');
 	/**
 	 * Initializes the default buttons (view, update and delete).
 	 */
-	protected function initDefaultButtons()
+	/* protected function initDefaultButtons()
 	{
 		parent::initDefaultButtons();
+	} */
+	protected function initDefaultButtons()
+	{
+		if($this->viewButtonLabel===null)
+			$this->viewButtonLabel=Yii::t('zii','View');
+		if($this->updateButtonLabel===null)
+			$this->updateButtonLabel=Yii::t('zii','Update');
+		if($this->deleteButtonLabel===null)
+			$this->deleteButtonLabel=Yii::t('zii','Delete');
+		if($this->viewButtonImageUrl===null)
+			$this->viewButtonImageUrl=$this->grid->baseScriptUrl.'/view.png';
+		if($this->updateButtonImageUrl===null)
+			$this->updateButtonImageUrl=$this->grid->baseScriptUrl.'/update.png';
+		if($this->deleteButtonImageUrl===null)
+			$this->deleteButtonImageUrl=$this->grid->baseScriptUrl.'/delete.png';
+		if($this->deleteConfirmation===null)
+			$this->deleteConfirmation=Yii::t('zii','Are you sure you want to delete this item?');
+	
+		foreach(array('view','update','delete') as $id)
+		{
+			$button=array(
+					'label'=>$this->{$id.'ButtonLabel'},
+					'url'=>$this->{$id.'ButtonUrl'},
+					//'imageUrl'=>$this->{$id.'ButtonImageUrl'},
+					'icon'=>$this->{$id.'ButtonIcon'},
+					'options'=>$this->{$id.'ButtonOptions'},
+			);
+			if(isset($this->buttons[$id]))
+				$this->buttons[$id]=array_merge($button,$this->buttons[$id]);
+			else
+				$this->buttons[$id]=$button;
+		}
+	
+		if(!isset($this->buttons['delete']['click']))
+		{
+			if(is_string($this->deleteConfirmation))
+				$confirmation="if(!confirm(".CJavaScript::encode($this->deleteConfirmation).")) return false;";
+			else
+				$confirmation='';
+	
+			if(Yii::app()->request->enableCsrfValidation)
+			{
+				$csrfTokenName = Yii::app()->request->csrfTokenName;
+				$csrfToken = Yii::app()->request->csrfToken;
+				$csrf = "\n\t\tdata:{ '$csrfTokenName':'$csrfToken' },";
+			}
+			else
+				$csrf = '';
+	
+			if($this->afterDelete===null)
+				$this->afterDelete='function(){}';
+	
+			$this->buttons['delete']['click']=<<<EOD
+function() {
+	$confirmation
+	var th = this,
+		afterDelete = $this->afterDelete;
+	jQuery('#{$this->grid->id}').yiiGridView('update', {
+		type: 'POST',
+		url: jQuery(this).attr('href'),$csrf
+		success: function(data) {
+			jQuery('#{$this->grid->id}').yiiGridView('update');
+			afterDelete(th, true, data);
+		},
+		error: function(XHR) {
+			return afterDelete(th, false, XHR);
+		}
+	});
+	return false;
+}
+EOD;
+		}
 	}
-
 	/**
 	 * Renders a link button.
 	 * @param string $id the ID of the button
