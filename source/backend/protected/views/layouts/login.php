@@ -13,10 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/login.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
-<body>
-<div id="wrr-body">
-<center style="margin-bottom: 20px"><img width="150" class="logo" src="<?php echo Yii::app()->theme->baseUrl; ?>/images/logo_g.png" /></center>
+<body class="theme-default page-signin">
 <?php echo $content; ?>
-</div>
 </body>
 </html>
