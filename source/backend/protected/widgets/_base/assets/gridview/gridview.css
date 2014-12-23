@@ -73,7 +73,7 @@
 	border-bottom: 1px solid #eee;
 }
 .grid-view table.items tbody tr td a{
-	color: #2793E6;
+	color: #333;
 	display: block;
 }
 .grid-view table.items tbody tr:hover
