@@ -9,8 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/themes/default/css/ie.css" media="screen, projection" />
 	<![endif]-->
 	<link type="image/x-icon" rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/system/images/favicon.ico" >	
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/screen.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/login.css" />
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 <body class="theme-default page-signin">

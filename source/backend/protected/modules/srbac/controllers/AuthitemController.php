@@ -29,6 +29,7 @@ class AuthitemController extends BackendApplicationController {
    */
   private $_model;
 
+  public $layout = "application.modules.srbac.views.layouts.default";
   public function init() {
     parent::init();
   }

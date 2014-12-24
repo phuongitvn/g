@@ -37,22 +37,23 @@
 				</div> <!-- / Password -->
 				<div class="form-group w-icon has-error">
 					<?php echo CHtml::activeCheckBox($model,'rememberMe'); ?>
-					<span><?php echo Yii::t("main","Remember me next time");?></span>
+					<label for="UserLogin_rememberMe"><?php echo Yii::t("main","Remember me next time");?></label>
 				</div>
 				<div class="form-actions">
-					<input type="submit" value="<?php echo Yii::t("main","Login");?>" class="signin-btn bg-primary">
 					<a href="#" class="forgot-password" id="forgot-password-link"><?php echo Yii::t("main","Forgot your password?");?></a>
 				</div> <!-- / .form-actions -->
-			<?php echo CHtml::endForm(); ?>
 			<!-- / Form -->
 
 			<!-- "Sign In with" block -->
 			<div class="signin-with">
 				<!-- Facebook -->
-				<a href="index.html" class="signin-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">Sign In with <span>Facebook</span></a>
+				<!-- <a href="index.html" class="signin-with-btn" style="background:#4f6faa;background:rgba(79, 111, 170, .8);">Sign In with <span>Facebook</span></a>-->
+				<div class="form-actions" style="margin: 0;">
+					<input style="width: 100%" type="submit" value="<?php echo Yii::t("main","Login");?>" class="signin-btn bg-primary">
+				</div>
 			</div>
 			<!-- / "Sign In with" block -->
-
+<?php echo CHtml::endForm(); ?>
 			<!-- Password reset form -->
 			<div class="password-reset-form" id="password-reset-form">
 				<div class="header">
@@ -82,13 +83,11 @@
 <?php 
 	$cs = Yii::app()->getClientScript();
 	$cs->registerCoreScript('jquery');
-	$cs->registerScriptFile(Yii::app()->request->baseUrl.'/system/js/core.js');
 	$dir = Yii::getPathOfAlias('common').DS.'libs/bootstrap';
 	$assets = Yii::app()->assetManager->publish($dir, false, -1, YII_DEBUG);
 	$cs->registerScriptFile($assets.'/js/bootstrap.min.js');
 	$cs->registerCssFile($assets.'/css/bootstrap.min.css');
 	?>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/pages.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/pixel-admin.min.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/system/css/themes.min.css" />

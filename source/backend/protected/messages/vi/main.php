@@ -12,7 +12,7 @@ return array(
 	'Login to your account'=>'Đăng nhập tài khoản',
 	'Username or Email'=>'Tên hoặc Email',
 	'Password'=>'Mật khẩu',
-	'Forgot your password ?'=>'Quên mật khẩu ?',
+	'Forgot your password?'=>'Quên mật khẩu ?',
 	'no worries'=>'Đừng lo lắng',
 	'click'=>'click',
 	'here'=>'đây',

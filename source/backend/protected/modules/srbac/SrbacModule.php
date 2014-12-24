@@ -98,10 +98,12 @@ class SrbacModule extends CWebModule {
     ));
     //Set layout to main
     if($this->layout =="") {
-      $this->layout = "application.views.layouts.main";
+      //$this->layout = "application.views.layouts.main";
+      $this->layout = "application.modules.srbac.views.layouts.default";
     }
     //Publish css
-    $this->_cssPublished = Helper::publishCss($this->css);
+    //$this->_cssPublished = Helper::publishCss($this->css);
+    $this->_cssPublished = true;
 
     //Publish images
     $this->setIconsPath(Helper::publishImages($this->imagesPath,$this->imagesPack));
